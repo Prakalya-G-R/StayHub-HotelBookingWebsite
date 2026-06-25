@@ -1,0 +1,336 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+.container{
+    padding: 25px 30px;
+}
+
+body, html{
+    margin:0;
+    overflow-x: hidden;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    padding: 25px 30px;
+    height: 40px;
+}
+
+
+@media(min-width: 1200px){
+    
+    .container{
+        padding: 25px 100px !important;
+    }
+    .navbar{
+        padding: 25px 100px !important;
+    }
+}
+
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30px;
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-menu a.active{
+    border-bottom: 2px solid #33865E;
+    padding-bottom: 4px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: black;;
+    font-size: 14px;
+}
+#loginbtn{
+    display: none;
+}
+
+.loginout{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 30px;
+    padding: 5px 15px;
+    background: #33865E;
+    border-radius: 7px;
+    font-weight: 500;
+}
+.menu-close{
+    display: none;
+}
+.nav-logo{
+    color: black;
+    font-family: 'protest riot', 'poppins', sans-serif;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-logo svg{
+    width: 20px;
+    display: block;
+    color: #33865E;
+}
+
+.nav-container{
+    display: flex;
+}
+
+.nav-toggle{
+    display: none !important;
+}
+
+.hotels-page{
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    margin-top: 40px;
+
+}
+
+.filters-card{
+    border: 1px solid rgb(203, 202, 202);
+    border-radius: 10px;
+}
+
+
+.hotel-container{
+    border: 1px solid rgb(203, 202, 202);
+    padding: 0 25px;
+}
+.hotels-page{
+    gap: 25px;
+}
+
+.hotel-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotelactionicons{
+    display: flex;
+    gap: 10px;
+}
+
+.filter-toggle{
+    display: none;
+}
+#destsearch{
+    width: 100%;
+}
+
+.dest-field{
+    grid-column: 1 / -1;
+}
+#guests, #rooms{
+    width: 100%;
+}
+.search-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.search-div{
+    font-size: 15px;
+    background: rgb(250, 247, 247);
+    padding: 8px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(203, 202, 202);
+}
+
+.searchcontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin :0 auto;
+    padding: 10px;
+    border-bottom: 1px solid rgb(220, 217, 217);
+    width: 100%;
+}
+
+.searchfield{
+    font-size: 13px;
+}
+
+.searchfield input{
+    border: none;
+    border-bottom: 1px solid rgb(133, 131, 131);
+    padding: 3px 5px;
+    outline: none;
+    min-width: 0;
+}
+
+.searchfield input::placeholder, input[type="date"]{
+    font-size: 12px;
+    color: #aaa9a9;
+}
+
+
+input[type="date"]:valid{
+    color: black;
+}
+
+#checkin, #checkout{
+    width: 100%;
+}
+
+.checkinfield, .checkoutfield{
+    grid-column: 1 / -1;
+}
+
+
+.searchfield label{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.searchfield svg{
+    width: 16px;
+    color: #2e9161;
+}
+
+#searchroomsbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 13px;
+    border: none;
+    background-color: #33865E;
+    color: white;
+    font-weight: 500;
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+#searchroomsbtn:hover{
+    transform: translateY(-2px);
+}
+
+#searchroomsbtn:active{
+    transform: translateY(3px);
+}
+
+#searchroomsbtn svg{
+    width:20px;
+}
+
+
+
+
+@media (max-width: 768px){
+
+.filters-container{
+    display: none;
+}
+
+
+.container{
+    padding: 25px 30px;
+}
+
+
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #33865E;
+    padding: 35px 30px;
+}
+
+
+#loginbtn{
+    display: block;
+}
+
+.loginout{
+    display: none;
+}
+
+.nav-toggle{
+    display: block !important;
+    color: white;
+    cursor: pointer;
+}
+.hamburger{
+    display: flex;
+    margin-left: auto;
+}
+.nav-menu{
+    position:fixed;
+    width: 100%;
+    height: 300px;
+    opacity: 0;
+    background: #33865E;
+    pointer-events:none;
+    transform:translateY(-30px);
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu-item a{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#loginbtn a{
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.nav-menu.active{
+    opacity: 0.95;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.menu-close{
+    display: block;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.nav-logo{
+    color: white;
+}
+
+.nav-logo svg{
+    color: black;
+}
+
+
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssfiles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap" rel="stylesheet">
+    <title>Hotel Booking Website</title>
+</head>
+<body>
+    <section id="home">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hotel-icon lucide-hotel"><path d="M10 22v-6.57"/><path d="M12 11h.01"/><path d="M12 7h.01"/><path d="M14 15.43V22"/><path d="M15 16a5 5 0 0 0-6 0"/><path d="M16 11h.01"/><path d="M16 7h.01"/><path d="M8 11h.01"/><path d="M8 7h.01"/><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
+                StayHub
+            </div>
+        </div>
+        <div class="nav-toggle">
+            <div class="hamburger">
+                <svg id="hambar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <div class="menu-close">
+                <svg id="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <li class="menu-item"><a href="#home" class="active">Home</a></li>
+            <li class="menu-item"><a href="hotels.html">Hotels</a></li>
+            <li class="menu-item"><a href="#destinations">Destinations</a></li>
+            <li class="menu-item" id="bookings-link" style="display: none;">
+        <a href="#">My Bookings</a>
+    </li>
+            <li class="menu-item"><a href="#about">About</a></li>
+            <li id="loginbtn" class="menu-item"><a href="#">Login</a></li>
+        </ul>
+
+        <a href="#" class="loginout">Login</a>
+    </nav>
+    <div class="home-content">
+        <div class="home-text">
+            <p class="mainline"> Find Your Perfect Stay <br>Across India.</p>
+            <p class="subline">Compare prices, explore destinations, and book your ideal stay with ease.</p>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <form class="searchcontent">
+                        <div class="searchfield dest-field">
+                            <label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                            Destination</label>
+                            <input id="destsearch" type="text" placeholder="e.g. Goa" autocomplete="off" required>
+                            <div id="suggestions"></div>
+                        </div>
+                        <div class="searchfield checkinfield">
+                            <label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-arrow-up-icon lucide-calendar-arrow-up"><path d="m14 18 4-4 4 4"/><path d="M16 2v4"/><path d="M18 22v-8"/><path d="M21 11.343V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>
+                            Check In</label>
+                            <input id="checkin" type="date" required oninvalid="this.setCustomValidity('Please select a check-in date')"
+    oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="searchfield checkoutfield">
+                            <label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-arrow-down-icon lucide-calendar-arrow-down"><path d="m14 18 4 4 4-4"/><path d="M16 2v4"/><path d="M18 14v8"/><path d="M21 11.354V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.343"/><path d="M3 10h18"/><path d="M8 2v4"/></svg>
+                            Check Out</label>
+                            <input id="checkout" type="date" required oninvalid="this.setCustomValidity('Please select a check-in date')"
+    oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="searchfield">
+                            <label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                            Guests</label>
+                            <input type="number" id="guests" min="1" placeholder="e.g. 2" required oninvalid="this.setCustomValidity('Please select a check-in date')"
+    oninput="this.setCustomValidity('')">
+                        </div>
+                        <div class="searchfield">
+                            <label><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bed-single-icon lucide-bed-single"><path d="M3 20v-8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8"/><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M3 18h18"/></svg>
+                            Rooms</label>
+                            <input type="number" id="rooms" min="1" placeholder="e.g. 1" required oninvalid="this.setCustomValidity('Please select a check-in date')"
+    oninput="this.setCustomValidity('')">
+                        </div>
+                        <button src="#" type="submit" id="searchroomsbtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                            Search
+                        </button>
+                    </form>
+    </section>
+
+    <section id="destinations">
+        <div class="desthead">
+            <P>Popular Destinations</P>
+        </div>
+        <div class="dest-container">
+            <div class="destcard">
+                <img class="destimg" src="assets/mumbaidest.jpg" alt="Mumbai">
+                <div class="dest-overlay">
+                    <h3>Mumbai</h3>
+                    <p>5 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/hyderabaddest.webp" alt="Hyderabad">
+                <div class="dest-overlay">
+                    <h3>Hyderabad</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/chennaidest3.jfif" alt="Chennai">
+                <div class="dest-overlay">
+                    <h3>Chennai</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/goadest.webp" alt="Goa">
+                <div class="dest-overlay">
+                    <h3>Goa</h3>
+                    <p>5 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/jaipurdest.jfif" alt="Jaipur">
+                <div class="dest-overlay">
+                    <h3>Jaipur</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/ootydest2.jfif" alt="Ooty">
+                <div class="dest-overlay">
+                    <h3>Ooty</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/udaipurdest.webp" alt="Udaipur">
+                <div class="dest-overlay">
+                    <h3>Udaipur</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/pondicherrydest.webp" alt="Pondicherry">
+                <div class="dest-overlay">
+                    <h3>Pondicherry</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/manalidest.avif" alt="Manali">
+                <div class="dest-overlay">
+                    <h3>Manali</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/darjeelingdest.webp" alt="Darjeeling">
+                <div class="dest-overlay">
+                    <h3>Darjeeling</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+            <div class="destcard">
+                <img class="destimg" src="assets/coorgdest.jpg" alt="Coorg">
+                <div class="dest-overlay">
+                    <h3>Coorg</h3>
+                    <p>4 Hotels</p>
+                </div>
+                <span class="viewhotelsidf">></span>
+            </div>
+        </div>  
+        <div class="viewmoredestbtn">
+            <button id="moredest">More Destinations ></button>
+        </div>
+        
+    </section>
+
+    <section id="hotels">
+        
+    </section>
+
+
+    <script src="jsfiles/script.js"></script>
+</body>
+</html>
