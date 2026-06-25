@@ -67,3 +67,11 @@ searchroomsbtn.addEventListener("click",()=>{
     }
     //TODO: connect search to hotel filtering
 });
+
+
+const slider=document.getElementById("priceRange");
+const price=document.getElementById("priceValue");
+
+slider.addEventListener("input", ()=>{
+    priceValue.textContent=slider.value;
+})

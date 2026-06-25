@@ -7,6 +7,12 @@
 
 }
 
+:root{
+    --primary-color: #33865E;
+    --border-bottom-grey: 1px solid rgb(220, 217, 217);
+    --filter-head-bg: rgb(250, 247, 247);
+}
+
 .container{
     padding: 25px 30px;
 }
@@ -146,7 +152,7 @@ body, html{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .search-div{
@@ -224,6 +230,29 @@ input[type="date"]:valid{
     grid-column: 1 / -1;
     width: 100%;
 }
+.dest-field{
+    position: relative;
+}
+#suggestions{
+    position: absolute;
+    top: 100%;
+    left:0;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.suggestion-item{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.suggestion-item:hover{
+    background: #f2f2f2;
+}
 
 #searchroomsbtn:hover{
     transform: translateY(-2px);
@@ -237,7 +266,107 @@ input[type="date"]:valid{
     width:20px;
 }
 
+.ratings-content label{
+    display: flex;
+    padding-left: 10px;
+    font-size: 13px;
+    gap: 8px;
+    color: rgb(40, 40, 40);
+}
 
+.ratings-container{
+    border-bottom: var(--border-bottom-grey);
+}
+
+.ratings-option span{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+
+.ratings-content{
+    padding: 10px;
+}
+
+.ratings-option svg{
+    width: 16px;
+    color: #fbbf24;
+}
+
+input[type="radio"]{
+    accent-color: #33865E;
+}
+
+.filter-head{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: rgb(95, 93, 93);
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: var(--border-bottom-grey);
+}
+.ratinghead, .pricehead, .propertyhead, .amenitieshead{
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: var(--border-bottom-grey);
+    background: var(--filter-head-bg);
+}
+
+.price-container, .property-container{
+    border-bottom: var(--border-bottom-grey);
+}
+
+.price-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+input[type="range"]{
+    accent-color: var(--primary-color);
+    height: 3px;
+}
+
+
+.pricevalue p{
+    font-size: 13px;
+    align-items: center;
+    display: flex;
+    padding-top: 10px;
+}
+.pricevalue svg{
+    width: 16px;
+    padding-left: 5px;
+}
+
+.pricevalue span{
+    font-weight: 500;
+    color: rgb(67, 67, 67);
+}
+
+.property-content, .amenities-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+.property-content label, .amenities-content label{
+    display: flex;
+    padding-left: 10px;
+    gap: 8px;
+    font-size: 13px;
+}
+
+input[type="checkbox"]{
+    accent-color: var(--primary-color);
+}
 
 
 @media (max-width: 768px){
