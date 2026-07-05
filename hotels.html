@@ -7,7 +7,7 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Hotels Page</title>
 </head>
 <body>
     <nav class="navbar">
@@ -45,6 +45,9 @@
                 <div class="search-container">
                     <div class="search-div">
                         <p class="search-head">Search Hotels</p>
+                        <div class="close-menu">
+                            <svg id="closemenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                        </div>
                     </div>
                     <form class="searchcontent">
                         <div class="searchfield dest-field">
@@ -160,6 +163,14 @@
                             <label><input type="checkbox" value="spa"> <span>Spa</span></label>
                         </div>
                     </div>
+                    <div class="apply-reset">
+                        <div id="reset">
+                            <p>Reset</p>
+                        </div>
+                        <div id="apply">
+                            <p>Apply</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </aside>
@@ -167,15 +178,26 @@
             <div class="hotel-head">
                 <h2 class="hotelheading">All Hotels</h2>
                 <div class="hotelactionicons">
-                <div class="filter-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-funnel-icon lucide-funnel"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                    <div class="filter-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-funnel-icon lucide-funnel"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
+                    </div>
+                    <div id="sorticon">
+                        <svg id="sortbtn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down-icon lucide-arrow-up-down"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+                        <div id="sort-container">
+                        <p class="sort-head">Sort By</p>
+                        <div class="sort-content">
+                            <label id="sort"><input type=radio name="sort" value="Recommended" checked>Recommended</label>
+                            <label id="sort"><input type=radio name="sort" value="priceLowToHigh">Price (Low to High)</label>
+                            <label id="sort"><input type=radio name="sort" value="priceHighToLow">Price (High to Low)</label>
+                            <label id="sort"><input type=radio name="sort" value="guestRatings">Guest Ratings</label>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-                <div class="sorticon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-down-icon lucide-arrow-up-down"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
-                </div>
-                </div>
+            <div class="hotel-content">
+                
             </div>
-            <div class="hotel-content"></div>
         </section>
     </main>
 

@@ -74,4 +74,44 @@ const price=document.getElementById("priceValue");
 
 slider.addEventListener("input", ()=>{
     priceValue.textContent=slider.value;
+});
+
+const sortcontainer = document.getElementById("sort-container");
+const sortbtn = document.getElementById("sortbtn");
+
+sortbtn.addEventListener("click", (e)=>{;
+    sortcontainer.classList.add("active");
+    e.stopPropagation();
+    sortbtn.style.display="none";
+});
+
+window.addEventListener("click",(e)=>{
+    if(sortcontainer.classList.contains("active") && !sortcontainer.contains(e.target) && !sortbtn.contains(e.target)){
+    sortcontainer.classList.remove("active");
+    sortbtn.style.display="block";
+}
+});
+
+
+const sortcontent=document.querySelectorAll('input[name="sort"]');
+sortcontent.forEach(radio =>{
+    radio.addEventListener("change", ()=>{
+        sortcontainer.classList.remove("active");
+        sortbtn.style.display="block";
+    });
+});
+
+const filter=document.querySelector(".filter-toggle");
+const filtermenu=document.querySelector(".filters-container");
+
+filter.addEventListener("click", ()=>{
+    filtermenu.classList.add("active");
+});
+
+const closefilter=document.getElementById("closemenu");
+
+closefilter.addEventListener("click", ()=>{
+    filtermenu.classList.remove("active");
 })
+
+
