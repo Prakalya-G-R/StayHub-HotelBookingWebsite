@@ -117,7 +117,7 @@ closefilter.addEventListener("click", ()=>{
 
 //Hotel Objects
 
-const hotels = [
+export const hotels = [
     
     //chennai
 {
@@ -1816,9 +1816,9 @@ const hotels = [
 
     images: {
         cover: "hotel-images/GemParkOoty/cover.jpg",
-        room: "hotel-images/GemParkOoty/1.jpg",
-        pool: "hotel-images/GemParkOoty/2.jpg",
-        restaurant: "hotel-images/GemParkOoty/3.jpg"
+        room: "hotel-images/GemParkOoty/1.jfif",
+        pool: "hotel-images/GemParkOoty/2.jfif",
+        restaurant: "hotel-images/GemParkOoty/3.jfif"
     },
 
     description: "A comfortable hillside hotel offering panoramic valley views, modern amenities, quality dining, and convenient access to Ooty's attractions."
