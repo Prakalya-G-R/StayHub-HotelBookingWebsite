@@ -19,7 +19,7 @@
 
 body, html{
     margin:0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
@@ -32,9 +32,10 @@ body{
     width: 100%;
     align-items: flex-start;
     padding: 25px 30px;
-    height: 40px;
     position: fixed;
     background: var(--filter-head-bg);
+    z-index: 10;
+    box-shadow: 0px 2px 25px rgba(22, 22, 22, 0.08);
 }
 
 
@@ -48,6 +49,12 @@ body{
     }
     .hotel-head{
         padding: 8px 25px !important;
+    }
+    .hotels-page{
+        grid-template-columns: 300px 1fr !important;
+    }
+    .filters-card{
+        width: 300px !important;
     }
 }
 
@@ -115,10 +122,11 @@ body{
 .hotels-page{
     display: grid;
     grid-template-columns: 235px 1fr;
-    margin-top: 100px;
+    margin-top: 130px;
     align-items: start;
-
 }
+
+
 .filters-container{
     position: sticky;
     align-self: start;
@@ -126,24 +134,23 @@ body{
 @media (min-width: 769px){
 
     .filters-card{
-        height: calc(100vh - 142px);
+        height: calc(100vh - 170px);
         position: fixed;
         width: 230px;
         overflow-y: auto;
+        margin-bottom: 50px;
+        overscroll-behavior: contain;
     }
 
 }
 
 .filters-card{
-    border: 1px solid rgb(203, 202, 202);
+    /*border: 1px solid rgb(203, 202, 202);*/
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
 }
 .hotel-content{
     word-break: break-all;
-    position: sticky;
-    height: calc(100vh - 200px);
-    overflow-y: auto;
-    padding-bottom: 100px;
 }
 
 .hotel-container{
@@ -559,14 +566,14 @@ input[type="checkbox"]{
 
 @media (max-width: 768px){
 
-    #hotel-list{
-        grid-template-columns: repeat(2,1fr);
-    }
+#hotel-list{
+    grid-template-columns: repeat(2,1fr);
+}
 
-    #sort-container{
-        top: -8px;
-        right: -10px;
-    }
+#sort-container{
+    top: -8px;
+    right: -10px;
+}
 
 .search-div{
     display: flex;
@@ -615,6 +622,7 @@ input[type="checkbox"]{
 
 .hotel-container{
     padding: 0 8px;
+    margin-top: 50px;
 }
 
 .container{
@@ -628,7 +636,7 @@ input[type="checkbox"]{
     justify-content: space-between;
     align-items: center;
     background: #33865E;
-    padding: 35px 30px;
+    padding: 25px 30px;
 }
 
 

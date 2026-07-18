@@ -123,7 +123,7 @@ export const hotels = [
 {
     id: "the-leela-palace-chennai",
     name: "The Leela Palace Chennai",
-    recommended: 9,
+    recommended: 10,
     city: "chennai",
     type: "hotel",
     rating: 4.8,
@@ -148,7 +148,7 @@ export const hotels = [
 
 {
     id: "itc-grand-chola",
-    recommended: 11,
+    recommended: 12,
     name: "ITC Grand Chola",
     city: "chennai",
     type: "hotel",
@@ -174,7 +174,7 @@ export const hotels = [
 
 {
     id: "taj-coromandel",
-    recommended: 18,
+    recommended: 19,
     name: "Taj Coromandel",
     city: "chennai",
     type: "hotel",
@@ -201,7 +201,7 @@ export const hotels = [
     {
     id: "park-hyatt-chennai",
 
-    recommended: 23,
+    recommended: 24,
 
     name: "Park Hyatt Chennai",
     city: "Chennai",
@@ -271,7 +271,7 @@ export const hotels = [
 {
     id: "itc-kohenur",
 
-    recommended: 22,
+    recommended: 23,
 
     name: "ITC Kohenur",
     city: "Hyderabad",
@@ -305,7 +305,7 @@ export const hotels = [
 {
     id: "park-hyatt-hyderabad",
 
-    recommended: 31,
+    recommended: 32,
 
     name: "Park Hyatt Hyderabad",
     city: "Hyderabad",
@@ -409,7 +409,7 @@ export const hotels = [
 {
     id: "the-oberoi-mumbai",
 
-    recommended: 16,
+    recommended: 17,
 
     name: "The Oberoi Mumbai",
     city: "Mumbai",
@@ -443,7 +443,7 @@ export const hotels = [
 {
     id: "trident-nariman-point",
 
-    recommended: 26,
+    recommended: 27,
 
     name: "Trident Nariman Point",
     city: "Mumbai",
@@ -477,7 +477,7 @@ export const hotels = [
 {
     id: "st-regis-mumbai",
 
-    recommended: 27,
+    recommended: 28,
 
     name: "St. Regis Mumbai",
     city: "Mumbai",
@@ -511,7 +511,7 @@ export const hotels = [
 {
     id: "jw-marriott-mumbai-juhu",
 
-    recommended: 40,
+    recommended: 41,
 
     name: "JW Marriott Mumbai Juhu",
     city: "Mumbai",
@@ -547,7 +547,7 @@ export const hotels = [
 {
     id: "w-goa",
 
-    recommended: 8,
+    recommended: 9,
 
     name: "W Goa",
     city: "Goa",
@@ -581,7 +581,7 @@ export const hotels = [
 {
     id: "taj-exotica-goa",
 
-    recommended: 21,
+    recommended: 22,
 
     name: "Taj Exotica Resort & Spa",
     city: "Goa",
@@ -615,7 +615,7 @@ export const hotels = [
 {
     id: "grand-hyatt-goa",
 
-    recommended: 13,
+    recommended: 14,
 
     name: "Grand Hyatt Goa",
     city: "Goa",
@@ -649,7 +649,7 @@ export const hotels = [
 {
     id: "itc-grand-goa",
 
-    recommended: 24,
+    recommended: 25,
 
     name: "ITC Grand Goa",
     city: "Goa",
@@ -683,7 +683,7 @@ export const hotels = [
 {
     id: "st-regis-goa-resort",
 
-    recommended: 35,
+    recommended: 36,
 
     name: "St. Regis Goa Resort",
     city: "Goa",
@@ -719,7 +719,7 @@ export const hotels = [
 {
     id: "palais-de-mahe",
 
-    recommended: 28,
+    recommended: 29,
 
     name: "Palais de Mahe",
     city: "Pondicherry",
@@ -753,7 +753,7 @@ export const hotels = [
 {
     id: "le-pondy",
 
-    recommended: 36,
+    recommended: 37,
 
     name: "Le Pondy",
     city: "Pondicherry",
@@ -787,7 +787,7 @@ export const hotels = [
 {
     id: "accord-puducherry",
 
-    recommended: 42,
+    recommended: 43,
 
     name: "Accord Puducherry",
     city: "Pondicherry",
@@ -821,7 +821,7 @@ export const hotels = [
 {
     id: "the-promenade",
 
-    recommended: 41,
+    recommended: 42,
 
     name: "The Promenade",
     city: "Pondicherry",
@@ -892,7 +892,7 @@ export const hotels = [
 {
     id: "fairmont-jaipur",
 
-    recommended: 17,
+    recommended: 18,
 
     name: "Fairmont Jaipur",
     city: "Jaipur",
@@ -926,7 +926,7 @@ export const hotels = [
 {
     id: "itc-rajputana",
 
-    recommended: 32,
+    recommended: 33,
 
     name: "ITC Rajputana",
     city: "Jaipur",
@@ -960,7 +960,7 @@ export const hotels = [
 {
     id: "jaipur-marriott-hotel",
 
-    recommended: 49,
+    recommended: 50,
 
     name: "Jaipur Marriott Hotel",
     city: "Jaipur",
@@ -1064,7 +1064,7 @@ export const hotels = [
 {
     id: "trident-udaipur",
 
-    recommended: 25,
+    recommended: 26,
 
     name: "Trident Udaipur",
     city: "Udaipur",
@@ -1098,7 +1098,7 @@ export const hotels = [
 {
     id: "shiv-niwas-palace",
 
-    recommended: 15,
+    recommended: 16,
 
     name: "Shiv Niwas Palace",
     city: "Udaipur",
@@ -1135,7 +1135,7 @@ export const hotels = [
 {
     id: "the-himalayan",
 
-    recommended: 10,
+    recommended: 11,
 
     name: "The Himalayan",
     city: "Manali",
@@ -1169,7 +1169,7 @@ export const hotels = [
 {
     id: "span-resort-spa",
 
-    recommended: 29,
+    recommended: 30,
 
     name: "Span Resort & Spa",
     city: "Manali",
@@ -1203,7 +1203,7 @@ export const hotels = [
 {
     id: "larisa-resort",
 
-    recommended: 37,
+    recommended: 38,
 
     name: "Larisa Resort",
     city: "Manali",
@@ -1237,7 +1237,7 @@ export const hotels = [
 {
     id: "mastiff-grand-manali",
 
-    recommended: 45,
+    recommended: 46,
 
     name: "Mastiff Grand Manali",
     city: "Manali",
@@ -1308,7 +1308,7 @@ export const hotels = [
 {
     id: "itc-maurya",
 
-    recommended: 12,
+    recommended: 13,
 
     name: "ITC Maurya",
     city: "Delhi",
@@ -1342,7 +1342,7 @@ export const hotels = [
 {
     id: "taj-palace-new-delhi",
 
-    recommended: 33,
+    recommended: 34,
 
     name: "Taj Palace New Delhi",
     city: "Delhi",
@@ -1376,7 +1376,7 @@ export const hotels = [
 {
     id: "the-imperial-new-delhi",
 
-    recommended: 34,
+    recommended: 35,
 
     name: "The Imperial New Delhi",
     city: "Delhi",
@@ -1413,7 +1413,7 @@ export const hotels = [
 {
     id: "mayfair-darjeeling",
 
-    recommended: 20,
+    recommended: 21,
 
     name: "Mayfair Darjeeling",
     city: "Darjeeling",
@@ -1447,7 +1447,7 @@ export const hotels = [
 {
     id: "glenburn-tea-estate",
 
-    recommended: 38,
+    recommended: 39,
 
     name: "Glenburn Tea Estate",
     city: "Darjeeling",
@@ -1481,7 +1481,7 @@ export const hotels = [
 {
     id: "summit-swiss-heritage",
 
-    recommended: 43,
+    recommended: 44,
 
     name: "Summit Swiss Heritage",
     city: "Darjeeling",
@@ -1515,7 +1515,7 @@ export const hotels = [
 {
     id: "sterling-darjeeling",
 
-    recommended: 44,
+    recommended: 45,
 
     name: "Sterling Darjeeling",
     city: "Darjeeling",
@@ -1586,7 +1586,7 @@ export const hotels = [
 {
     id: "evolve-back-coorg",
 
-    recommended: 14,
+    recommended: 15,
 
     name: "Evolve Back Coorg",
     city: "Coorg",
@@ -1620,7 +1620,7 @@ export const hotels = [
 {
     id: "the-tamara-coorg",
 
-    recommended: 30,
+    recommended: 31,
 
     name: "The Tamara Coorg",
     city: "Coorg",
@@ -1654,7 +1654,7 @@ export const hotels = [
 {
     id: "club-mahindra-madikeri",
 
-    recommended: 46,
+    recommended: 47,
 
     name: "Club Mahindra Madikeri",
     city: "Coorg",
@@ -1691,7 +1691,7 @@ export const hotels = [
 {
     id: "savoy-ooty",
 
-    recommended: 19,
+    recommended: 20,
 
     name: "Savoy Ooty",
     city: "Ooty",
@@ -1725,7 +1725,7 @@ export const hotels = [
 {
     id: "fortune-resort-sullivan-court",
 
-    recommended: 39,
+    recommended: 40,
 
     name: "Fortune Resort Sullivan Court",
     city: "Ooty",
@@ -1759,7 +1759,7 @@ export const hotels = [
 {
     id: "sterling-ooty-fern-hill",
 
-    recommended: 47,
+    recommended: 48,
 
     name: "Sterling Ooty Fern Hill",
     city: "Ooty",
@@ -1793,7 +1793,7 @@ export const hotels = [
 {
     id: "gem-park-ooty",
 
-    recommended: 48,
+    recommended: 49,
 
     name: "Gem Park Ooty",
     city: "Ooty",
