@@ -36,7 +36,7 @@ html, body{
 
 @media(min-width: 1200px){
     
-    #home, #destinations{
+    #home, #destinations, #hotels{
         padding: 25px 300px !important;
     }
     .search-container{
@@ -213,6 +213,10 @@ input[type="date"]:valid{
     margin-top: 150px;
     padding: 25px 70px;
 }
+#hotels{
+    margin-top: 50px;
+    padding: 25px 70px;
+}
 
 .dest-field{
     position: relative;
@@ -238,7 +242,7 @@ input[type="date"]:valid{
     background: #f2f2f2;
 }
 
-.desthead{
+.desthead, .hotelhead{
     font-size: 28px;
     font-weight: 600;
     color: #222;
@@ -353,6 +357,7 @@ input[type="date"]:valid{
 #moredest:active{
     transform: translateY(2px);
 }
+
 
 @media (max-width: 550px){
     .dest-container{

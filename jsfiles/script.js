@@ -103,6 +103,39 @@ moredestbtn.addEventListener("click", () => {
     }
 });
 
+import {hotels} from "./hotels.js";
+console.log(hotels);
+
+const featuredHotelNames=[
+    "ITC Grand Chola",
+    "The Himalayan",
+    "W Goa",
+    "The Leela Palace New Delhi",
+    "The Oberoi Udaivilas",
+    "Evolve Back Coorg"
+];
+
+const featuredHotels=hotels.filter(hotel=>
+    featuredHotelNames.includes(hotel.name)
+);
+
+const hotelContainer=document.getElementById("hotel-container");
+function displayHotels(hotelsArray){
+    hotelContainer.innerHTML="";
+    hotelsArray.forEach(hotel=>{
+        hotelContainer.innerHTML+=`
+        <div class="hotel-card">
+        <img src="${hotel.images.cover}" alt="${hotel.name}">
+        <h3 class="hotel-name">${hotel.name}</h3>
+        <p class="hotel-city">${hotel.city}</p>
+        <p class="hotel-price">${hotel.price}</p>
+        </div>
+        `;
+    });
+}
+
+displayHotels(featuredHotels);
+
 updateWhenResize();
 
 window.addEventListener("resize", ()=>{

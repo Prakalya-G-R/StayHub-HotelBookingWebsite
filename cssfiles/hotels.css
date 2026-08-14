@@ -145,17 +145,18 @@ body{
 }
 
 .filters-card{
-    /*border: 1px solid rgb(203, 202, 202);*/
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
+    border: 1px solid rgb(203, 202, 202);
+    /*border: 1px solid var(--primary-color);*/
+    border-radius: 4px;
 }
 .hotel-content{
     word-break: break-all;
+
 }
 
-.hotel-container{
+/*.hotel-container{
     border: 1px solid rgb(203, 202, 202);
-}
+}*/
 
 .hotels-page{
     gap: 25px;
@@ -506,7 +507,8 @@ input[type="checkbox"]{
 
 .hotel-head{
     padding: 8px;
-    border-bottom: var(--border-bottom-grey);
+    border: 1px solid rgb(203, 202, 202);
+
 }
 
 .close-menu{
@@ -565,6 +567,10 @@ input[type="checkbox"]{
 
 
 @media (max-width: 768px){
+.hotel-head{
+    border: none;
+    border-bottom: 1px solid rgb(203, 202, 202);
+}
 
 #hotel-list{
     grid-template-columns: repeat(2,1fr);
@@ -622,6 +628,7 @@ input[type="checkbox"]{
 
 .hotel-container{
     padding: 0 8px;
+    border: 1px solid rgb(203, 202, 202);
     margin-top: 50px;
 }
 
