@@ -125,10 +125,11 @@ function displayHotels(hotelsArray){
     hotelsArray.forEach(hotel=>{
         hotelContainer.innerHTML+=`
         <div class="hotel-card">
-        <img src="${hotel.images.cover}" alt="${hotel.name}">
+        <img class="hotel-img" src="${hotel.images.cover}" alt="${hotel.name}">
         <h3 class="hotel-name">${hotel.name}</h3>
         <p class="hotel-city">${hotel.city}</p>
-        <p class="hotel-price">${hotel.price}</p>
+        <p class="hotel-price"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
+        ${hotel.price}<span class="per-night">/night</span></p>
         </div>
         `;
     });
