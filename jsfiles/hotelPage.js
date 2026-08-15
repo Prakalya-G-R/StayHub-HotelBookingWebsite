@@ -112,5 +112,5 @@ const closefilter=document.getElementById("closemenu");
 
 closefilter.addEventListener("click", ()=>{
     filtermenu.classList.remove("active");
-})
+});
 
