@@ -446,7 +446,7 @@ input[type="date"]:valid{
 }
 
 @media (max-width: 550px){
-    .dest-container{
+    .dest-container, #hotel-container{
         grid-template-columns: 1fr !important;
         align-items: center;
     }
