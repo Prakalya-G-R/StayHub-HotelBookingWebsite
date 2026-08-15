@@ -901,7 +901,7 @@ export const hotels = [
     },
 
     images: {
-        cover: "hotel-images/TheOberoiUdaivilas/cover.webp",
+        cover: "hotel-images/TheOberoiUdaivilas/cover.jfif",
         room: "hotel-images/TheOberoiUdaivilas/1.jpg",
         pool: "hotel-images/TheOberoiUdaivilas/2.jpg",
         restaurant: "hotel-images/TheOberoiUdaivilas/3.webp"

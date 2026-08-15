@@ -31,7 +31,7 @@ function ListHotels(sortedHotels){
         .map(key => amenityNames[key])
         .join(" • ");
         hotelList.innerHTML+=`
-        <div class="hotel-card">
+        <div class="hotel-card" data-id="${hotel.id}">
         <img id="hotel-image" src="${hotel.images.cover}" alt="${hotel.name}">
         <div class="hotel-content">
         <p class="hotel-name">${hotel.name}</p>
@@ -45,5 +45,12 @@ function ListHotels(sortedHotels){
         </div></div>`
     });
 }
+
+document.querySelectorAll(".hotel-card").forEach(card=>{
+    card.addEventListener("click" , ()=>{
+        const id = card.dataset.id;
+        window.location.href=`hotel_details.html?id=${id}`
+    });
+});
 
 ListHotels(sortedHotels);

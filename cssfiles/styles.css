@@ -14,40 +14,12 @@ html, body{
     padding: 0;
     overflow-x: hidden;
 }
-
-#home{
-    background-image: linear-gradient(
-        rgb(0,0,0,0.85),
-        rgba(0,0,0,0.45)
-    ),
-    url(../assets/homehotel.webp);
-    width: 100%;
-    height:60vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 25px 70px;
-    position: relative;
-}
-
 .navbar{
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: flex-start;
     padding-bottom: 25px;
-}
-
-
-@media(min-width: 1200px){
-    
-    #home, #destinations, #hotels{
-        padding: 25px 300px !important;
-    }
-    .search-container{
-        gap: 20px;
-        width:950px;
-    }
 }
 .nav-menu{
     display: flex;
@@ -107,6 +79,33 @@ html, body{
 
 .nav-toggle{
     display: none;
+}
+
+#home{
+    background-image: linear-gradient(
+        rgb(0,0,0,0.85),
+        rgba(0,0,0,0.45)
+    ),
+    url(../assets/homehotel.webp);
+    width: 100%;
+    height:60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 25px 70px;
+    position: relative;
+}
+
+
+@media(min-width: 1200px){
+    
+    #home, #destinations, #hotels{
+        padding: 25px 300px !important;
+    }
+    .search-container{
+        gap: 20px;
+        width:950px;
+    }
 }
 
 .home-content{
@@ -455,51 +454,27 @@ input[type="date"]:valid{
 
 
 @media (max-width: 768px){
-
-
-.dest-container, #hotel-container{
-    grid-template-columns: repeat(2, 1fr);
-}
-
-#destinations{
-    margin-top: 260px;
-    padding: 25px 70px
-}
-#hotels{
-    margin-top: 50px;
-    padding: 25px 70px;
-}
-
-.navbar{
+    .navbar{
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 0;
     align-items: center;
 }
-
-.searchcontent{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin :0 auto;
-    max-width: 300px;
-}
-.search-container{
-    max-width: 400px;
-    bottom: -50%;
-}
-
-
-#searchroomsbtn{
-    grid-column: 1 / -1;
+.nav-menu{
+    position:fixed;
     width: 100%;
-}
-.dest-field{
-    grid-column: 1 / -1;
-}
-#guests, #rooms{
-    width: 100%;
+    height: 300px;
+    opacity: 0;
+    background: white;
+    pointer-events:none;
+    transform:translateY(-30px);
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #loginbtn{
@@ -519,21 +494,7 @@ input[type="date"]:valid{
     display: flex ;
     margin-left: auto;
 }
-.nav-menu{
-    position:fixed;
-    width: 100%;
-    height: 300px;
-    opacity: 0;
-    background: white;
-    pointer-events:none;
-    transform:translateY(-30px);
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .menu-item a{
     color: #222;
@@ -560,6 +521,43 @@ input[type="date"]:valid{
     right: 70px;
 }
 
+.dest-container, #hotel-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#destinations{
+    margin-top: 260px;
+    padding: 25px 70px
+}
+#hotels{
+    margin-top: 50px;
+    padding: 25px 70px;
+}
+
+
+.searchcontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin :0 auto;
+    max-width: 300px;
+}
+.search-container{
+    max-width: 400px;
+    bottom: -50%;
+}
+
+
+#searchroomsbtn{
+    grid-column: 1 / -1;
+    width: 100%;
+}
+.dest-field{
+    grid-column: 1 / -1;
+}
+#guests, #rooms{
+    width: 100%;
+}
 
 
 }
