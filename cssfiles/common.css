@@ -25,6 +25,12 @@ body{
     background:#fafafa;
 }
 
+@media (min-width: 1200px){
+    .navbar{
+        padding: 25px 100px !important;
+    }
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -149,14 +155,6 @@ body{
     font-weight: 500;
 }
 
-.close-menu{
-    display: flex;
-    color: var(--primary-color);
-}
-
-.close-menu:hover{
-    cursor: pointer;
-}
 
 #loginbtn a{
     color: white;

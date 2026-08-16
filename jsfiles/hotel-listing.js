@@ -46,11 +46,11 @@ function ListHotels(sortedHotels){
     });
 }
 
+ListHotels(sortedHotels);
+
 document.querySelectorAll(".hotel-card").forEach(card=>{
     card.addEventListener("click" , ()=>{
         const id = card.dataset.id;
         window.location.href=`hotel_details.html?id=${id}`
     });
 });
-
-ListHotels(sortedHotels);

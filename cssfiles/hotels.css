@@ -4,9 +4,6 @@
     .container{
         padding: 25px 100px !important;
     }
-    .navbar{
-        padding: 25px 100px !important;
-    }
     .hotel-head{
         padding: 8px 25px !important;
     }
@@ -207,6 +204,9 @@ input[type="date"]:valid{
 #searchroomsbtn:active{
     transform: translateY(3px);
 }
+
+
+
 
 #searchroomsbtn svg{
     width:20px;
@@ -411,9 +411,6 @@ input[type="checkbox"]{
 
 }
 
-
-
-
 .hotel-content{
     padding: 13px;
 }
@@ -493,12 +490,17 @@ input[type="checkbox"]{
     word-break: break-word;
 }
 
+.close-menu{
+    display: none;
+}
+
 .hotel-price{
     display: flex;
     align-items: center;
     font-size: 14px;
     font-weight: 600;
     padding-top: 3px;
+    word-break: normal;
 }
 .hotel-price svg{
     width: 16px;
@@ -552,6 +554,15 @@ input[type="checkbox"]{
 
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+.close-menu{
+    display: flex;
+    color: var(--primary-color);
+}
+
+.close-menu:hover{
+    cursor: pointer;
 }
 
 .filters-container.active{

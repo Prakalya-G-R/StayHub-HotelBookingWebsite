@@ -20,6 +20,15 @@ export const hotels = [
         restaurant: true,
         parking: true
     },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TheLeelaPalaceChennai/cover.avif",
         room: "hotel-images/TheLeelaPalaceChennai/1.webp",
@@ -46,6 +55,15 @@ export const hotels = [
         restaurant: true,
         parking: true
     },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/ITCchola/cover.jfif",
         room: "hotel-images/ITCchola/1.jfif",
@@ -72,6 +90,15 @@ export const hotels = [
         restaurant: true,
         parking: true
     },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+    
     images: {
         cover: "hotel-images/TajCoromandel/cover.jfif",
         room: "hotel-images/TajCoromandel/1.jpg",
@@ -103,6 +130,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -141,6 +176,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TajFalaknuma/cover.jpg",
         room: "hotel-images/TajFalaknuma/1.png",
@@ -173,6 +216,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -209,6 +260,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/ParkHyattHyderabad/cover.jpg",
         room: "hotel-images/ParkHyattHyderabad/1.webp",
@@ -241,6 +300,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -279,6 +346,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TajMahalPalace/cover.jfif",
         room: "hotel-images/TajMahalPalace/1.jfif",
@@ -311,6 +386,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -347,6 +430,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TridentNariman/cover.jpg",
         room: "hotel-images/TridentNariman/1.webp",
@@ -381,6 +472,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/StRegis/cover.jpg",
         room: "hotel-images/StRegis/1.jpg",
@@ -413,6 +512,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -451,6 +558,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/Wgoa/cover.jpg",
         room: "hotel-images/Wgoa/1.avif",
@@ -485,6 +600,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },  
+
     images: {
         cover: "hotel-images/TajExoticaResort/cover.jpg",
         room: "hotel-images/TajExoticaResort/1.jpg",
@@ -517,6 +640,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -553,6 +684,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/ITCgrandGoa/cover.jpg",
         room: "hotel-images/ITCgrandGoa/1.jpg",
@@ -585,6 +724,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -623,6 +770,14 @@ export const hotels = [
         spa: false
     },
 
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/PalaisDeMahe/cover.jpg",
         room: "hotel-images/PalaisDeMahe/1.jfif",
@@ -655,6 +810,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -691,6 +854,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/AccordPuducherry/cover.webp",
         room: "hotel-images/AccordPuducherry/1.jpg",
@@ -723,6 +894,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: false
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -762,6 +941,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/RambaghPalace/cover.jpg",
         room: "hotel-images/RambaghPalace/1.avif",
@@ -794,6 +981,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -830,6 +1025,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/ITCrajputana/cover.jpg",
         room: "hotel-images/ITCrajputana/1.avif",
@@ -862,6 +1065,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -900,6 +1111,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TheOberoiUdaivilas/cover.jfif",
         room: "hotel-images/TheOberoiUdaivilas/1.jpg",
@@ -932,6 +1151,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -968,6 +1195,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TridentUdaipur/cover.jfif",
         room: "hotel-images/TridentUdaipur/1.webp",
@@ -1000,6 +1235,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: false
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1039,6 +1282,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TheHimalayan/cover.jpg",
         room: "hotel-images/TheHimalayan/1.jfif",
@@ -1071,6 +1322,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1107,6 +1366,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/LarisaResort/cover.jpg",
         room: "hotel-images/LarisaResort/1.jpg",
@@ -1139,6 +1406,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: false
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1178,6 +1453,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TheLeelaPalaceNewDelhi/cover.jpg",
         room: "hotel-images/TheLeelaPalaceNewDelhi/1.webp",
@@ -1210,6 +1493,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1246,6 +1537,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TajPalaceNewDelhi/cover.jpeg",
         room: "hotel-images/TajPalaceNewDelhi/1.jfif",
@@ -1278,6 +1577,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1317,6 +1624,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/MayfairDarjeeling/cover.jfif",
         room: "hotel-images/MayfairDarjeeling/1.jfif",
@@ -1349,6 +1664,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: false
+    },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1385,6 +1708,14 @@ export const hotels = [
         spa: false
     },
 
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/SummitSwissHeritage/cover.jfif",
         room: "hotel-images/SummitSwissHeritage/1.jfif",
@@ -1417,6 +1748,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: true
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1456,6 +1795,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TajMadikeriResortSpa/cover.jfif",
         room: "hotel-images/TajMadikeriResortSpa/1.jfif",
@@ -1488,6 +1835,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: true
+    },
+
+    room: {
+        name: "Luxury Suite",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1524,6 +1879,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/TheTamaraCoorg/cover.jfif",
         room: "hotel-images/TheTamaraCoorg/1.jfif",
@@ -1556,6 +1919,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1595,6 +1966,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Executive Room",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/SavoyOoty/cover.jfif",
         room: "hotel-images/SavoyOoty/1.jfif",
@@ -1627,6 +2006,14 @@ export const hotels = [
         restaurant: true,
         gym: true,
         spa: true
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
@@ -1663,6 +2050,14 @@ export const hotels = [
         spa: true
     },
 
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+    },
+
     images: {
         cover: "hotel-images/SterlingOotyFernHill/cover.jfif",
         room: "hotel-images/SterlingOotyFernHill/1.jfif",
@@ -1695,6 +2090,14 @@ export const hotels = [
         restaurant: true,
         gym: false,
         spa: true
+    },
+
+    room: {
+        name: "Deluxe Room",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
     },
 
     images: {
