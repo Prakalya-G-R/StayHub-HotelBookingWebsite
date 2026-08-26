@@ -29,6 +29,7 @@ html, body{
     gap: 30px;
     list-style-type: none;
     position: relative;
+    z-index: 1000;
 }
 
 

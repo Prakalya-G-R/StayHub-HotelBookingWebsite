@@ -22,10 +22,11 @@ if(hotel){
     const hotelTitle=document.querySelector(".hotel-title");
     const mainImg=document.querySelector(".main-img");
     const otherImg=document.querySelector(".other-images");
-    const bookingPrice=document.querySelector(".booking-price");
+    const priceval=document.getElementById("price-val");
     const checkin=document.getElementById("checkin");
     const checkout=document.getElementById("checkout");
     const guests = document.getElementById("guestCount");
+    const priceper=document.getElementById("price-per-night");
     
     hotelTitle.innerHTML=`
     <h1>${hotel.name}</h1>
@@ -43,23 +44,56 @@ if(hotel){
     <img src="${hotel.images.pool}" alt="pool">
     <img src="${hotel.images.restaurant}" alt="restaurant">`;
 
-    bookingPrice.innerHTML=`<p>${hotel.price}</p>`;
+    priceper.textContent=`${hotel.price}`;
+
+    priceval.textContent=`${hotel.price.toLocaleString()}`;
 
     guests.innerHTML=`${hotel.room.guests}`;
 
-}
+    const roomCapacity = hotel.room.guests;
+    const totalPrice=hotel.price;
 
+    const roomsInput = document.getElementById("rooms");
+    const guestCount = document.getElementById("guestCount");
+    const finalPrice = document.getElementById("price-val");
 
-
-/*const roomCapacity = selectedRoom.guests; // 2, 3 or 4
-
-const roomsInput = document.getElementById("rooms");
-const guestCount = document.getElementById("guestCount");
-
-function updateGuests() {
-    const total = roomCapacity * Number(roomsInput.value);
-    guestCount.textContent = `${total} Guests`;
-}
+    function updateGuests() {
+        const total = roomCapacity * Number(roomsInput.value);
+        guestCount.textContent = `${total} Guests`;
+    }
+    function getNights(){
+        if(!checkin.value || !checkout.value) return 0;
+        const inDate = new Date(checkin.value);
+        const outDate = new Date(checkout.value);
+        const nights=(outDate-inDate)/(1000 * 60 * 60 * 24);
+        return nights>0?nights:0;
+    }
+    function updateTotal(){
+        const nights=getNights();
+        if (nights === 0) {
+        finalPrice.textContent = "Select dates";
+        return;
+        }
+        const total = totalPrice * nights * Number(roomsInput.value);
+        finalPrice.textContent=`${total.toLocaleString()}`;
+    }
 
 updateGuests();
-roomsInput.addEventListener("input", updateGuests);*/
+updateTotal();
+const today = new Date().toISOString().split("T")[0];
+checkin.min = today;
+checkout.min = today;
+checkin.addEventListener("change", ()=>{
+    checkout.min=checkin.value;
+    if (checkout.value && checkout.value < checkin.value) {
+        checkout.value = "";
+    }
+    updateTotal();
+});
+checkout.addEventListener("change",updateTotal);
+roomsInput.addEventListener("change", () =>{
+    updateGuests();
+    updateTotal();
+});
+
+}

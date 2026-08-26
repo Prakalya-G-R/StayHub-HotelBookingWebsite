@@ -40,13 +40,6 @@
         <a href="#" class="loginout">Login</a>
     </nav>
     <main class="hotel-details">
-        <section class="hotel-head">
-            <div class="hotel-title">
-                <!--Name-->
-                <!--City-->
-                <!--ratings-->
-            </div>
-        </section>
         <section class="gallery-booking">
             <div class="main-img">
                 <!--cover-image-->
@@ -55,7 +48,21 @@
                 <!--room-->
                 <!--restaurant-->
             </div>
+            <section class="hotel-head">
+            <div class="hotel-title">
+                <!--Name-->
+                <!--City-->
+                <!--ratings-->
+            </div>
+        </section>
             <aside class="booking-card">
+                <div class="priceNight">
+                    <div class="pricetag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
+                    <span id="price-per-night"></span>
+                    <span id="perN">/night</span></div>
+                    <p id="taxfee">+taxes and fees</p>
+                </div>
                 <div class="booking-dates">
                     <!--check-IN-->
                     <!--check-OUT-->
@@ -77,10 +84,13 @@
                 </div>
                 <div class="booking-price">
                     <!--room price-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
+                    <p id="price-val"></p>
                 </div>
                 <button class="book-now">Book Now</button>
             </aside>
         </section>
+        
         <section class="hotel-info">
             <div class="info-top">
                 <div class="hotel-desc">
