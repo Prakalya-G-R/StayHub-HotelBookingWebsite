@@ -54,11 +54,17 @@
                 <!--City-->
                 <!--ratings-->
             </div>
+            <div class="hotel-amenities">
+                <!--amenities-->
+                <h2>Amenities</h2>
+                <div class="amenities-list"></div>
+            </div>
         </section>
             <aside class="booking-card">
+                <div class="bcardleft">
                 <div class="priceNight">
                     <div class="pricetag">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
                     <span id="price-per-night"></span>
                     <span id="perN">/night</span></div>
                     <p id="taxfee">+taxes and fees</p>
@@ -66,28 +72,38 @@
                 <div class="booking-dates">
                     <!--check-IN-->
                     <!--check-OUT-->
-                    <label for="checkin">Check In</label>
-                    <input type="date" id="checkin">
-                    <label for="checkout">Check Out</label>
-                    <input type="date" id="checkout">
+                    <div class="dates">
+                        <label for="checkin">Check In:</label>
+                        <input type="date" id="checkin">
+                    </div>
+                    <div class="dates">
+                        <label for="checkout">Check Out:</label>
+                        <input type="date" id="checkout">
+                    </div>
                 </div>
+                </div>
+                <div class="bcardright">
                 <div class="booking-room-info">
                     <div class="room-count">
-                        <label for="rooms">Rooms</label>
+                        <label for="rooms">Rooms:</label>
                         <input type="number" id="rooms" min="1" value="1">
                     </div>
                     <div class="booking-guests">
                         <!--no.of guests-->
-                        <p>Guests</p>
+                        <p>Guests:</p>
                         <span id="guestCount"></span>
                     </div>
                 </div>
                 <div class="booking-price">
+                    <span>------------------------------<span></span>
+                    <div class="totalprice"><p class="total-head">Total:</p>
                     <!--room price-->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
-                    <p id="price-val"></p>
+                    <p class="finalprice"> <svg id="rupee" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
+                    <p id="price-val"></p></p></div>
+                    <span>------------------------------</span>
                 </div>
                 <button class="book-now">Book Now</button>
+            </div>
             </aside>
         </section>
         
@@ -100,9 +116,6 @@
                     <!--ratings-->
                     <!--reviews-->
                 </aside>
-            </div>
-            <div class="hotel-amenities">
-                <!--amenities-->
             </div>
             <div class="room-cards">
                 <!--room image-->

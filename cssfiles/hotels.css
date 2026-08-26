@@ -240,6 +240,7 @@ input[type="date"]:valid{
     color: #fbbf24;
 }
 
+
 input[type="radio"]{
     accent-color: #33865E;
 }
@@ -515,6 +516,13 @@ input[type="checkbox"]{
     }
 }
 
+@media( max-width: 990px){
+    #hotel-list{
+        grid-template-columns: 1fr 1fr !important;
+        align-items: center;
+    }
+}
+
 
 @media (max-width: 768px){
 .hotel-head{
@@ -579,13 +587,16 @@ input[type="checkbox"]{
 }
 
 .hotel-container{
-    padding: 0 8px;
+    padding: 0;
     border: 1px solid rgb(203, 202, 202);
-    margin-top: 50px;
+    margin-top: 10px;
+}
+.hotel-card{
+    margin-top: 20px;
 }
 
-.container{
-    padding: 25px 30px;
+.hotels-page{
+    padding: 0;
 }
 
 

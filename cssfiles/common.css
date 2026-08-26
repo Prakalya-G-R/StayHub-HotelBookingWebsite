@@ -184,7 +184,7 @@ body{
 }
 
 .nav-logo svg{
-    color: white;
+    color: var(--primary-color);
 }
 
 
