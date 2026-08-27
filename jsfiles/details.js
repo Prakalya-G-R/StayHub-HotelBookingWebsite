@@ -13,6 +13,7 @@ close.addEventListener("click", ()=>{
 });
 
 import {hotels} from "./hotels.js";
+import { amenityIcons } from "./hotels.js";
 
 const params = new URLSearchParams(window.location.search);
 const hotelId= params.get("id");
@@ -27,14 +28,15 @@ if(hotel){
     const checkout=document.getElementById("checkout");
     const guests = document.getElementById("guestCount");
     const priceper=document.getElementById("price-per-night");
-    const amenities=document.getElementsByClassName(".amenities-list");
+    const amenities=document.querySelector(".amenities-list");
     
     hotelTitle.innerHTML=`
     <h1>${hotel.name}</h1>
     <div class="subtitle">
-    <p>${hotel.city}</p>|
+    <div class="hotel-city"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+    <p>${hotel.city}</p></div>
     <div class="rating-title"><p>${hotel.rating}</p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
     </div></div>`;
 
 
@@ -46,9 +48,19 @@ if(hotel){
     <img src="${hotel.images.pool}" alt="pool">
     <img src="${hotel.images.restaurant}" alt="restaurant">`;
 
-    amenitiesList.innerHTML = hotel.amenities
-    .map(item => `<div class="amenity">${item}</div>`)
-    .join("");
+    // Display amenities
+    amenities.innerHTML = "";
+
+    Object.entries(hotel.amenities).forEach(([key, value]) => {
+        if (value) {
+            amenities.innerHTML += `
+                <div class="amenity">
+                    ${amenityIcons[key]}
+                    <span>${key}</span>
+                </div>
+            `;
+        }
+    });
 
     priceper.textContent=`${hotel.price.toLocaleString("en-IN")}`;
 

@@ -518,7 +518,7 @@ input[type="checkbox"]{
 
 @media( max-width: 990px){
     #hotel-list{
-        grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 }
