@@ -31,13 +31,14 @@ if(hotel){
     const amenities=document.querySelector(".amenities-list");
     
     hotelTitle.innerHTML=`
-    <h1>${hotel.name}</h1>
+    <div class="main-title"><h1>${hotel.name}</h1>
+    <div class="rating-title"><p>${hotel.rating}</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+    </div></div>
     <div class="subtitle">
     <div class="hotel-city"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
     <p>${hotel.city}</p></div>
-    <div class="rating-title"><p>${hotel.rating}</p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
-    </div></div>`;
+    </div>`;
 
 
     mainImg.innerHTML=`
@@ -75,13 +76,22 @@ if(hotel){
     const guestCount = document.getElementById("guestCount");
     const finalPrice = document.getElementById("price-val");
     const rupee = document.getElementById("rupee");
+    const bookingDates=document.querySelector(".booking-dates");
+    const datesAlerting = document.querySelector(".dates-alerting");
 
     function updateGuests() {
         const total = roomCapacity * Number(roomsInput.value);
         guestCount.textContent = `${total} Guests`;
     }
     function getNights(){
-        if(!checkin.value || !checkout.value) return 0;
+        if(!checkin.value || !checkout.value){
+            bookingDates.style.border="1px solid rgb(191, 56, 56)";
+            bookingDates.style.width="fit-content";
+            datesAlerting.style.display="flex";
+            return 0;
+        }
+        bookingDates.style.border="none";
+        datesAlerting.innerHTML="";
         const inDate = new Date(checkin.value);
         const outDate = new Date(checkout.value);
         const nights=(outDate-inDate)/(1000 * 60 * 60 * 24);
