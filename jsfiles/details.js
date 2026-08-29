@@ -14,6 +14,7 @@ close.addEventListener("click", ()=>{
 
 import {hotels} from "./hotels.js";
 import { amenityIcons } from "./hotels.js";
+import { hotelRatingDetails } from "./hotels.js";
 
 const params = new URLSearchParams(window.location.search);
 const hotelId= params.get("id");
@@ -29,6 +30,9 @@ if(hotel){
     const guests = document.getElementById("guestCount");
     const priceper=document.getElementById("price-per-night");
     const amenities=document.querySelector(".amenities-list");
+    const description = document.querySelector(".hotel-desc");
+    const ratingMain=document.querySelector(".rat-rev-head");
+    const ratingList=document.querySelector(".rating-list");
     
     hotelTitle.innerHTML=`
     <div class="main-title"><h1>${hotel.name}</h1>
@@ -63,15 +67,34 @@ if(hotel){
         }
     });
 
+    const details = hotelRatingDetails[hotel.id];
+    ratingList.innerHTML = Object.entries(details)
+    .map(([key, value]) => `
+    <div class="rating-item">
+      <span class="rat-list">${key.charAt(0).toUpperCase() + key.slice(1)}</span>
+      <div class="rat-list-container">
+        <div class="rating-bar">
+            <div class="rating-fill" style="width:${(value/5)*100}%"></div>
+        </div>
+        <span id="rating-val">${value}</span>
+      </div>
+    </div>
+  `)
+  .join("");
+
     priceper.textContent=`${hotel.price.toLocaleString("en-IN")}`;
 
     priceval.textContent=`${hotel.price.toLocaleString("en-IN")}`;
 
     guests.innerHTML=`${hotel.room.guests}`;
 
+    description.innerHTML+=`<p>${hotel.description}</p>`;
+
+    ratingMain.innerHTML+=`<div class="rat-rev"><p class="rating-head">${hotel.rating}</p>
+    <p class="review">${hotel.reviews} reviews</p></div>`;
+
     const roomCapacity = hotel.room.guests;
     const totalPrice=hotel.price;
-
     const roomsInput = document.getElementById("rooms");
     const guestCount = document.getElementById("guestCount");
     const finalPrice = document.getElementById("price-val");
@@ -86,7 +109,8 @@ if(hotel){
     function getNights(){
         if(!checkin.value || !checkout.value){
             bookingDates.style.border="1px solid rgb(191, 56, 56)";
-            bookingDates.style.width="fit-content";
+            bookingDates.style.width="100%";
+            bookingDates.style.maxWidth="250px";
             datesAlerting.style.display="flex";
             return 0;
         }

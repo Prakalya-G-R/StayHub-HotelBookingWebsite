@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
 @media (min-width: 1200px){
     .hotel-details{
         padding: 25px 100px !important;
@@ -9,6 +14,8 @@
 
 :root{
     --primary-color: #33865E;
+    --secondary-color: rgb(79, 75, 75);
+    --light-grey: #a29f9f;
 }
 
 .hotel-details{
@@ -19,7 +26,7 @@
 .gallery-booking{
     display: grid;
     grid-template-columns: 2fr 1fr 300px;
-    gap: 20px;
+    gap: 15px;
     align-items: start;
 }
 
@@ -60,21 +67,23 @@
 
 .rating-title svg{
     width: 13px;
+    height: 13px;
 }
 
 .rating-title{
     background: rgb(233, 202, 144);
-    padding: 0px 5px;
+    padding: 3px 5px;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 100px;
     color: rgb(86, 61, 14);
     font-size: 13px;
     font-weight: 600;
 }
 
 .hotel-city svg{
-    width: 16px;
-    color: #ea7114;
+    width: 14px;
+    height: 14px;
+    color: #2563EB;
 }
 
 .rating-title{
@@ -98,27 +107,39 @@
 .hotel-amenities h2{
     font-weight: 600;
     font-size: 16px;
+    padding: 10px 0px;
+    margin: 10px 0px;
 }
 .amenities-list{
     display: flex;
     align-items: center;
-    gap: 20px;
     font-size: 13px;
-    color: rgb(79, 75, 75);
-}
+    gap:12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}   
+
 
 .main-title{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 .amenity svg{
     width: 15px;
+    height: 15px;
+    color: #2563EB;
 }
 
 .amenity{
     display: flex;
     gap: 5px;
+    color: rgb(79, 75, 75);
+    padding: 6px 10px;
+    background: #f0f2f5;
+    border: 1px solid #b2cfd7;
+    border-radius: 10px;
 }
 
 .pricetag{
@@ -141,7 +162,7 @@
 
 .hotel-title h1{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .similar-hotels h2{
@@ -154,8 +175,12 @@
     color: #767575;
     border: none;
     border-bottom:1px solid #222;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     background: none;
+}
+.booking-dates input::placeholder, input[type="date"]::-webkit-calendar-picker-indicator:hover{
+    cursor:pointer;
 }
 
 .booking-dates{
@@ -165,25 +190,25 @@
     flex-direction: column;
     gap: 3px;
     margin-top: 10px;
-    padding: 5px 10px;
+    padding: 12px 10px;
     border-radius: 12px;
 }
 .dates{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
 }
 
 .dates-alerting{
     display: flex;
-    font-size: 12px;
+    font-size: 11px;
     align-items: center;
-    gap: 5px;
     font-weight: 500;
+    margin-top: 3px;
+    gap: 3px;
 }
 
 .dates-alert-msg, .dates-alerting svg{
-    color: rgb(191, 56, 56);
+    color: rgb(113, 34, 34);
 }
 
 .dates-alerting svg{
@@ -199,15 +224,20 @@
     border: none;
     border-bottom: 1px solid #222;
     background: none;
+    text-align: center;
 }
+
 
 .booking-room-info{
     font-size: 13px;
     margin-top: 10px;
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
 .book-now{
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 8px 12px;
@@ -216,10 +246,13 @@
     color: white;
     border: none;
     font-weight: 500;
+    transition: background .2s ease, transform .2s ease;
 }
 
 .book-now:hover{
     cursor: pointer;
+    background:#2D7553;
+    transform: translateY(-1px);
 }
 
 .totalprice{
@@ -258,8 +291,95 @@
     padding-right: 5px;
 }
 
+#guestCount{
+    color: black;
+    font-weight: 400;
+}
 
-@media (max-width: 992px) {
+.hotel-desc{
+    margin: 10px 0px;
+}
+
+.hotel-desc h2{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.hotel-desc p{
+    font-size: 14px;
+}
+.hotel-head{
+    grid-column: 1 / span 3;
+}
+
+.info-top{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.hotel-ratings{
+    padding: 12px 16px;
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+}
+
+.rat-rev-head h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.rat-rev{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-head{
+    font-size:30px;
+    color: var(--primary-color);
+    font-weight:600;
+}
+
+.review{
+    font-size: 13px;
+    color: var(--secondary-color);
+}
+
+.rating-list{
+    font-size: 14px;
+}
+
+.rating-bar{
+    border-radius: 999px;
+    height: 5px;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    max-width: 200px;
+
+}
+.rating-fill{
+    border-radius: 999px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+#rating-val{
+    font-weight: 600;
+    text-align: right;
+}
+
+.rat-list-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) {
     .gallery-booking {
         grid-template-columns: 2fr 1fr;
     }
@@ -278,28 +398,57 @@
         grid-column: 1;
         grid-row: 2;
     }
+    .hotel-head{
+        grid-column: 1 / -1;
+    }
+    .info-top{
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        align-content: start;
+        box-sizing: border-box;
+    }
 }
+
 
 @media (max-width: 768px) {
     .gallery-booking {
         grid-template-columns: 1fr;
     }
+
+    .hotel-head{
+        grid-column:auto;
+        grid-row:auto;
+    }
+
+    .info-top{
+        grid-template-columns: 1fr;
+    }
+
     .booking-card {
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
-
-        width: 100%;
+        grid-column:auto;
+        grid-row:auto;
         height: 60px;
         background: rgb(26, 25, 25);
-        padding: 12px 16px;
+        box-sizing:border-box;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: white;
         z-index: 1000;
+    }
+    .booking-card{
+        min-height: 60px;
+        height: auto;
+    }
+    .book-now{
+        margin: 0;
+        width: auto;
+        max-width: 120px;
     }
 
     #perN, #taxfee{
@@ -325,8 +474,16 @@
         object-fit: cover;
     }
 
-    .other-images{
-        width: 100%;
-        height: 200px;
+    .other-images img{
+        width:100%;
+        height:200px;
+        object-fit:cover;
     }
+
+    .amenities-list{
+        flex-wrap: wrap;
+        gap: 12px 20px; 
+    }
+
 }
+
