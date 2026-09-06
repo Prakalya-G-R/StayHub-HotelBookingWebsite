@@ -11,7 +11,6 @@ export const hotels = [
     type: "Hotel",
     rating: 4.8,
     reviews: 4200,
-    price: 16500,
     amenities: {
         wifi: true,
         pool: true,
@@ -21,18 +20,39 @@ export const hotels = [
         parking: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 16500,
+        image: "hotel-images/TheLeelaPalaceChennai/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 21500,
+        image: "hotel-images/TheLeelaPalaceChennai/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 28000,
+        image: "hotel-images/TheLeelaPalaceChennai/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TheLeelaPalaceChennai/cover.avif",
-        room: "hotel-images/TheLeelaPalaceChennai/1.webp",
-        pool: "hotel-images/TheLeelaPalaceChennai/2.webp",
+        pool: "hotel-images/TheLeelaPalaceChennai/2.jfif",
         restaurant: "hotel-images/TheLeelaPalaceChennai/3.avif"
     },
     description: "Luxury five-star seafront hotel overlooking the Bay of Bengal, featuring elegant rooms, award-winning restaurants, a full-service spa, an outdoor infinity pool, and premium hospitality."
@@ -46,7 +66,6 @@ export const hotels = [
     type: "Hotel",
     rating: 4.8,
     reviews: 8283,
-    price: 18000,
     amenities: {
         wifi: true,
         pool: true,
@@ -56,17 +75,39 @@ export const hotels = [
         parking: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 18000,
+        image: "hotel-images/ITCchola/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 23500,
+        image: "hotel-images/ITCchola/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 30500,
+        image: "hotel-images/ITCchola/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/ITCchola/cover.jfif",
-        room: "hotel-images/ITCchola/1.jfif",
         pool: "hotel-images/ITCchola/2.jfif",
         restaurant: "hotel-images/ITCchola/3.jpg"
     },
@@ -81,7 +122,6 @@ export const hotels = [
     type: "Hotel",
     rating: 4.8,
     reviews: 5230,
-    price: 15500,
     amenities:{
         wifi: true,
         pool: true,
@@ -91,17 +131,39 @@ export const hotels = [
         parking: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 15500,
+        image: "hotel-images/TajCoromandel/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 20000,
+        image: "hotel-images/TajCoromandel/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 26500,
+        image: "hotel-images/TajCoromandel/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
+
     
     images: {
         cover: "hotel-images/TajCoromandel/cover.jfif",
-        room: "hotel-images/TajCoromandel/1.jpg",
         pool: "hotel-images/TajCoromandel/2.jfif",
         restaurant: "hotel-images/TajCoromandel/3.jpg"
     },
@@ -121,8 +183,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 3280,
 
-    price: 14500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -132,17 +192,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 14500,
+        image: "hotel-images/ParkHyatt/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 19000,
+        image: "hotel-images/ParkHyatt/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/ParkHyatt/cover.jfif",
-        room: "hotel-images/ParkHyatt/1.jfif",
         pool: "hotel-images/ParkHyatt/2.jpg",
         restaurant: "hotel-images/ParkHyatt/3.jpg"
     },
@@ -165,8 +238,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 2712,
 
-    price: 32000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -176,17 +247,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 32000,
+        image: "hotel-images/TajFalaknuma/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 41500,
+        image: "hotel-images/TajFalaknuma/exe.png",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 54500,
+        image: "hotel-images/TajFalaknuma/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TajFalaknuma/cover.jpg",
-        room: "hotel-images/TajFalaknuma/1.png",
         pool: "hotel-images/TajFalaknuma/2.jpg",
         restaurant: "hotel-images/TajFalaknuma/3.avif"
     },
@@ -207,8 +299,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 3860,
 
-    price: 13500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -218,17 +308,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 13500,
+        image: "hotel-images/TajFalaknuma/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 17500,
+        image: "hotel-images/TajFalaknuma/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/ITCkohenur/cover.avif",
-        room: "hotel-images/ITCkohenur/1.png",
         pool: "hotel-images/ITCkohenur/2.jpg",
         restaurant: "hotel-images/ITCkohenur/3.jfif"
     },
@@ -249,8 +351,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 3340,
 
-    price: 14500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -260,17 +360,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 14500,
+        image: "hotel-images/ParkHyattHyderabad/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 19000,
+        image: "hotel-images/ParkHyattHyderabad/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/ParkHyattHyderabad/cover.jpg",
-        room: "hotel-images/ParkHyattHyderabad/1.webp",
         pool: "hotel-images/ParkHyattHyderabad/2.jpg",
         restaurant: "hotel-images/ParkHyattHyderabad/3.jfif"
     },
@@ -291,8 +403,6 @@ export const hotels = [
     rating: 4.6,
     reviews: 3200,
 
-    price: 12500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -302,17 +412,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 12500,
+        image: "hotel-images/TheWestin/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 16500,
+        image: "hotel-images/TheWestin/lux.jfif",
+        guests: 4,
+        bed: "2 King Beds + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/TheWestin/cover.jpg",
-        room: "hotel-images/TheWestin/1.jpg",
         pool: "hotel-images/TheWestin/2.jpg",
         restaurant: "hotel-images/TheWestin/3.jfif"
     },
@@ -335,8 +457,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 10250,
 
-    price: 24500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -346,17 +466,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 24500,
+        image: "hotel-images/TajMahalPalace/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 32000,
+        image: "hotel-images/TajMahalPalace/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 41500,
+        image: "hotel-images/TajMahalPalace/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TajMahalPalace/cover.jfif",
-        room: "hotel-images/TajMahalPalace/1.jfif",
         pool: "hotel-images/TajMahalPalace/2.jpg",
         restaurant: "hotel-images/TajMahalPalace/3.jfif"
     },
@@ -377,8 +518,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 5840,
 
-    price: 21000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -388,17 +527,39 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 21000,
+        image: "hotel-images/TheOberoiMumbai/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 27500,
+        image: "hotel-images/TheOberoiMumbai/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 35500,
+        image: "hotel-images/TheOberoiMumbai/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/TheOberoiMumbai/cover.jfif",
-        room: "hotel-images/TheOberoiMumbai/1.webp",
         pool: "hotel-images/TheOberoiMumbai/2.jpg",
         restaurant: "hotel-images/TheOberoiMumbai/3.jfif"
     },
@@ -419,8 +580,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 4920,
 
-    price: 14500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -430,17 +589,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 14500,
+        image: "hotel-images/TridentNariman/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 19000,
+        image: "hotel-images/TridentNariman/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/TridentNariman/cover.jpg",
-        room: "hotel-images/TridentNariman/1.webp",
         pool: "hotel-images/TridentNariman/2.jpg",
         restaurant: "hotel-images/TridentNariman/3.jfif"
     },
@@ -461,8 +632,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 4380,
 
-    price: 19000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -472,17 +641,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 19000,
+        image: "hotel-images/StRegis/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 24500,
+        image: "hotel-images/StRegis/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/StRegis/cover.jpg",
-        room: "hotel-images/StRegis/1.jpg",
         pool: "hotel-images/StRegis/2.jpg",
         restaurant: "hotel-images/StRegis/3.jpg"
     },
@@ -503,8 +684,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 7560,
 
-    price: 17500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -514,17 +693,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 17500,
+        image: "hotel-images/JWmarriott/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 22500,
+        image: "hotel-images/JWmarriott/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
-        cover: "hotel-images/JWmarriott/cover.jpg",
-        room: "hotel-images/JWmarriott/1.webp",
+        cover: "hotel-images/JWmarriott/cover.jpg", 
         pool: "hotel-images/JWmarriott/2.jpg",
         restaurant: "hotel-images/JWmarriott/3.jfif"
     },
@@ -547,8 +738,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 3890,
 
-    price: 18500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -558,17 +747,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
-        name: "Luxury Suite",
-        guests: 4,
-        bed: "1 King Bed + Living Area",
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 18500,
+        image: "hotel-images/Wgoa/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 24000,
+        image: "hotel-images/Wgoa/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Luxury Suite",
+        price: 31500,
+        image: "hotel-images/Wgoa/lux.jfif",
+        guests: 4,
+        bed: "2 King Beds + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/Wgoa/cover.jpg",
-        room: "hotel-images/Wgoa/1.avif",
         pool: "hotel-images/Wgoa/2.jfif",
         restaurant: "hotel-images/Wgoa/3.avif"
     },
@@ -589,8 +799,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 4720,
 
-    price: 23500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -600,17 +808,39 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 23500,
+        image: "hotel-images/TajExoticaResort/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 30500,
+        image: "hotel-images/TajExoticaResort/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 40000,
+        image: "hotel-images/TajExoticaResort/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },  
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/TajExoticaResort/cover.jpg",
-        room: "hotel-images/TajExoticaResort/1.jpg",
         pool: "hotel-images/TajExoticaResort/2.jpg",
         restaurant: "hotel-images/TajExoticaResort/3.avif"
     },
@@ -631,8 +861,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 5980,
 
-    price: 16500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -642,17 +870,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 16500,
+        image: "hotel-images/GrandHyattGoa/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 21500,
+        image: "hotel-images/GrandHyattGoa/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/GrandHyattGoa/cover.jfif",
-        room: "hotel-images/GrandHyattGoa/1.webp",
         pool: "hotel-images/GrandHyattGoa/2.webp",
         restaurant: "hotel-images/GrandHyattGoa/3.jfif"
     },
@@ -673,8 +913,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 4360,
 
-    price: 17000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -684,17 +922,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 17000,
+        image: "hotel-images/ITCgrandGoa/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 22000,
+        image: "hotel-images/ITCgrandGoa/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/ITCgrandGoa/cover.jpg",
-        room: "hotel-images/ITCgrandGoa/1.jpg",
         pool: "hotel-images/ITCgrandGoa/2.png",
         restaurant: "hotel-images/ITCgrandGoa/3.jfif"
     },
@@ -715,8 +965,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 3510,
 
-    price: 25000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -726,17 +974,39 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 25000,
+        image: "hotel-images/StRegisGoaResort/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 32500,
+        image: "hotel-images/StRegisGoaResort/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 42500,
+        image: "hotel-images/StRegisGoaResort/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/StRegisGoaResort/cover.jfif",
-        room: "hotel-images/StRegisGoaResort/1.jpg",
         pool: "hotel-images/StRegisGoaResort/2.jfif",
         restaurant: "hotel-images/StRegisGoaResort/3.jpg"
     },
@@ -759,8 +1029,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 1820,
 
-    price: 10500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -770,17 +1038,29 @@ export const hotels = [
         spa: false
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 10500,
+        image: "hotel-images/PalaisDeMahe/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 13500,
+        image: "hotel-images/PalaisDeMahe/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
 
     images: {
         cover: "hotel-images/PalaisDeMahe/cover.jpg",
-        room: "hotel-images/PalaisDeMahe/1.jfif",
         pool: "hotel-images/PalaisDeMahe/2.jfif",
         restaurant: "hotel-images/PalaisDeMahe/3.avif"
     },
@@ -801,8 +1081,6 @@ export const hotels = [
     rating: 4.5,
     reviews: 2970,
 
-    price: 9800,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -812,17 +1090,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 9800,
+        image: "hotel-images/LePondy/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 12500,
+        image: "hotel-images/LePondy/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/LePondy/cover.avif",
-        room: "hotel-images/LePondy/1.jpg",
         pool: "hotel-images/LePondy/2.jpg",
         restaurant: "hotel-images/LePondy/3.avif"
     },
@@ -843,8 +1134,6 @@ export const hotels = [
     rating: 4.4,
     reviews: 2840,
 
-    price: 7200,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -854,17 +1143,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 7200,
+        image: "hotel-images/AccordPuducherry/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 9500,
+        image: "hotel-images/AccordPuducherry/exe.jfif",
+        guests: 3,
+        bed: "2 King Beds",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/AccordPuducherry/cover.webp",
-        room: "hotel-images/AccordPuducherry/1.jpg",
         pool: "hotel-images/AccordPuducherry/2.jpg",
         restaurant: "hotel-images/AccordPuducherry/3.avif"
     },
@@ -885,8 +1187,6 @@ export const hotels = [
     rating: 4.5,
     reviews: 2450,
 
-    price: 8900,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -896,17 +1196,30 @@ export const hotels = [
         spa: false
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 8900,
+        image: "hotel-images/ThePromenade/del.jfif",
         guests: 2,
-        bed: "1 Queen Bed",
+        bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 11500,
+        image: "hotel-images/ThePromenade/exe.jfif",
+        guests: 3,
+        bed: "2 Queen Beds",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/ThePromenade/cover.jpg",
-        room: "hotel-images/ThePromenade/1.jfif",
         pool: "hotel-images/ThePromenade/2.jpg",
         restaurant: "hotel-images/ThePromenade/3.avif"
     },
@@ -930,8 +1243,6 @@ export const hotels = [
     rating: 4.9,
     reviews: 3260,
 
-    price: 35500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -941,17 +1252,39 @@ export const hotels = [
         spa: true
     },
 
-    room: {
-        name: "Luxury Suite",
-        guests: 4,
-        bed: "1 King Bed + Living Area",
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 35500,
+        image: "hotel-images/RambaghPalace/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 46000,
+        image: "hotel-images/RambaghPalace/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Luxury Suite",
+        price: 60500,
+        image: "hotel-images/RambaghPalace/lux.jfif",
+        guests: 4,
+        bed: "2 King Beds + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/RambaghPalace/cover.jpg",
-        room: "hotel-images/RambaghPalace/1.avif",
         pool: "hotel-images/RambaghPalace/2.jpg",
         restaurant: "hotel-images/RambaghPalace/3.jpg"
     },
@@ -972,8 +1305,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 4380,
 
-    price: 17500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -983,17 +1314,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 17500,
+        image: "hotel-images/Fairmont/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 22500,
+        image: "hotel-images/Fairmont/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 30000,
+        image: "hotel-images/Fairmont/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/Fairmont/cover.cms",
-        room: "hotel-images/Fairmont/1.webp",
         pool: "hotel-images/Fairmont/2.jpg",
         restaurant: "hotel-images/Fairmont/3.jpg"
     },
@@ -1014,8 +1366,6 @@ export const hotels = [
     rating: 4.6,
     reviews: 4820,
 
-    price: 11200,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1025,17 +1375,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 11200,
+        image: "hotel-images/ITCrajputana/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 14500,
+        image: "hotel-images/ITCrajputana/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/ITCrajputana/cover.jpg",
-        room: "hotel-images/ITCrajputana/1.avif",
         pool: "hotel-images/ITCrajputana/2.jpg",
         restaurant: "hotel-images/ITCrajputana/3.avif"
     },
@@ -1056,8 +1418,6 @@ export const hotels = [
     rating: 4.5,
     reviews: 3960,
 
-    price: 9800,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1067,17 +1427,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 9800,
+        image: "hotel-images/JaipurMarriott/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 12500,
+        image: "hotel-images/JaipurMarriott/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/JaipurMarriott/cover.webp",
-        room: "hotel-images/JaipurMarriott/1.avif",
         pool: "hotel-images/JaipurMarriott/2.avif",
         restaurant: "hotel-images/JaipurMarriott/3.webp"
     },
@@ -1100,8 +1473,6 @@ export const hotels = [
     rating: 4.9,
     reviews: 3250,
 
-    price: 42000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1111,19 +1482,40 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 42000,
+        image: "hotel-images/TheOberoiUdaivilas/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 54500,
+        image: "hotel-images/TheOberoiUdaivilas/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 71500,
+        image: "hotel-images/TheOberoiUdaivilas/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TheOberoiUdaivilas/cover.jfif",
-        room: "hotel-images/TheOberoiUdaivilas/1.jpg",
         pool: "hotel-images/TheOberoiUdaivilas/2.jpg",
-        restaurant: "hotel-images/TheOberoiUdaivilas/3.webp"
+        restaurant: "hotel-images/TheOberoiUdaivilas/3.jfif"
     },
 
     description: "An award-winning luxury hotel on the banks of Lake Pichola featuring magnificent architecture, fine dining, lavish rooms, and world-class hospitality."
@@ -1142,8 +1534,6 @@ export const hotels = [
     rating: 4.9,
     reviews: 2980,
 
-    price: 45000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1153,17 +1543,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 45000,
+        image: "hotel-images/TajLakePalace/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 58500,
+        image: "hotel-images/TajLakePalace/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 76500,
+        image: "hotel-images/TajLakePalace/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TajLakePalace/cover.webp",
-        room: "hotel-images/TajLakePalace/1.jpg",
         pool: "hotel-images/TajLakePalace/2.jpg",
         restaurant: "hotel-images/TajLakePalace/3.avif"
     },
@@ -1184,8 +1595,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 2860,
 
-    price: 12000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1195,18 +1604,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 12000,
+        image: "hotel-images/TridentUdaipur/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 15500,
+        image: "hotel-images/TridentUdaipur/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/TridentUdaipur/cover.jfif",
-        room: "hotel-images/TridentUdaipur/1.webp",
-        pool: "hotel-images/TridentUdaipur/2.webp",
+        pool: "hotel-images/TridentUdaipur/2.jfif",
         restaurant: "hotel-images/TridentUdaipur/3.jpg"
     },
 
@@ -1226,8 +1647,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 1680,
 
-    price: 16500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1237,17 +1656,29 @@ export const hotels = [
         spa: false
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 16500,
+        image: "hotel-images/ShivNiwasPalace/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 21500,
+        image: "hotel-images/ShivNiwasPalace/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/ShivNiwasPalace/cover.jpg",
-        room: "hotel-images/ShivNiwasPalace/1.jpg",
         pool: "hotel-images/ShivNiwasPalace/2.avif",
         restaurant: "hotel-images/ShivNiwasPalace/3.avif"
     },
@@ -1271,8 +1702,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 1480,
 
-    price: 16500,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1282,17 +1711,37 @@ export const hotels = [
         spa: true
     },
 
-    room: {
-        name: "Luxury Suite",
-        guests: 4,
-        bed: "1 King Bed + Living Area",
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 16500,
+        image: "hotel-images/TheHimalayan/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
-
+        },
+        {
+        name: "Executive Room",
+        price: 21500,
+        image: "hotel-images/TheHimalayan/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Luxury Suite",
+        price: 28000,
+        image: "hotel-images/TheHimalayan/lux.jfif",
+        guests: 4,
+        bed: "2 King Beds + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
     images: {
         cover: "hotel-images/TheHimalayan/cover.jpg",
-        room: "hotel-images/TheHimalayan/1.jfif",
         pool: "hotel-images/TheHimalayan/2.jpg",
         restaurant: "hotel-images/TheHimalayan/3.jfif"
     },
@@ -1313,8 +1762,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 1840,
 
-    price: 14500,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1324,17 +1771,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 14500,
+        image: "hotel-images/SpanResort/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 19000,
+        image: "hotel-images/SpanResort/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/SpanResort/cover.jfif",
-        room: "hotel-images/SpanResort/1.jfif",
         pool: "hotel-images/SpanResort/2.jpg",
         restaurant: "hotel-images/SpanResort/3.jfif"
     },
@@ -1355,8 +1814,6 @@ export const hotels = [
     rating: 4.6,
     reviews: 1290,
 
-    price: 9800,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1366,17 +1823,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 9800,
+        image: "hotel-images/LarisaResort/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 12500,
+        image: "hotel-images/LarisaResort/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/LarisaResort/cover.jpg",
-        room: "hotel-images/LarisaResort/1.jpg",
         pool: "hotel-images/LarisaResort/2.jpg",
         restaurant: "hotel-images/LarisaResort/3.jfif"
     },
@@ -1397,8 +1867,6 @@ export const hotels = [
     rating: 4.4,
     reviews: 980,
 
-    price: 6800,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1408,17 +1876,29 @@ export const hotels = [
         spa: false
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 6800,
+        image: "hotel-images/MastiffGrandManali/del.jfif",
         guests: 2,
-        bed: "1 Queen Bed",
+        bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 9000,
+        image: "hotel-images/MastiffGrandManali/exe.jfif",
+        guests: 3,
+        bed: "2 King Beds",
+        breakfast: true,
+        refundable: true
+    }
+    ],
 
     images: {
         cover: "hotel-images/MastiffGrandManali/cover.jpg",
-        room: "hotel-images/MastiffGrandManali/1.jfif",
         pool: "hotel-images/MastiffGrandManali/2.jfif",
         restaurant: "hotel-images/MastiffGrandManali/3.jfif"
     },
@@ -1442,8 +1922,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 4380,
 
-    price: 26500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1453,17 +1931,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 26500,
+        image: "hotel-images/TheLeelaPalaceNewDelhi/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 34500,
+        image: "hotel-images/TheLeelaPalaceNewDelhi/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 45000,
+        image: "hotel-images/TheLeelaPalaceNewDelhi/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TheLeelaPalaceNewDelhi/cover.jpg",
-        room: "hotel-images/TheLeelaPalaceNewDelhi/1.webp",
         pool: "hotel-images/TheLeelaPalaceNewDelhi/2.jpg",
         restaurant: "hotel-images/TheLeelaPalaceNewDelhi/3.jfif"
     },
@@ -1484,8 +1983,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 6240,
 
-    price: 15500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1495,17 +1992,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 15500,
+        image: "hotel-images/ITCMaurya/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 20000,
+        image: "hotel-images/ITCMaurya/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/ITCMaurya/cover.png",
-        room: "hotel-images/ITCMaurya/1.jpg",
         pool: "hotel-images/ITCMaurya/2.jpg",
         restaurant: "hotel-images/ITCMaurya/3.jfif"
     },
@@ -1526,8 +2035,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 5320,
 
-    price: 15000,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1537,17 +2044,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 15000,
+        image: "hotel-images/TajPalaceNewDelhi/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 19500,
+        image: "hotel-images/TajPalaceNewDelhi/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/TajPalaceNewDelhi/cover.jpeg",
-        room: "hotel-images/TajPalaceNewDelhi/1.jfif",
         pool: "hotel-images/TajPalaceNewDelhi/2.jfif",
         restaurant: "hotel-images/TajPalaceNewDelhi/3.jfif"
     },
@@ -1568,8 +2087,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 3890,
 
-    price: 18500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1579,17 +2096,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 18500,
+        image: "hotel-images/TheImperialNewDelhi/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 24000,
+        image: "hotel-images/TheImperialNewDelhi/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/TheImperialNewDelhi/cover.jfif",
-        room: "hotel-images/TheImperialNewDelhi/1.jfif",
         pool: "hotel-images/TheImperialNewDelhi/2.jfif",
         restaurant: "hotel-images/TheImperialNewDelhi/3.jfif"
     },
@@ -1613,8 +2142,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 2140,
 
-    price: 13800,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1624,17 +2151,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 13800,
+        image: "hotel-images/MayfairDarjeeling/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 18000,
+        image: "hotel-images/MayfairDarjeeling/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/MayfairDarjeeling/cover.jfif",
-        room: "hotel-images/MayfairDarjeeling/1.jfif",
         pool: "hotel-images/MayfairDarjeeling/2.jpg",
         restaurant: "hotel-images/MayfairDarjeeling/3.jfif"
     },
@@ -1655,8 +2194,6 @@ export const hotels = [
     rating: 4.9,
     reviews: 690,
 
-    price: 22500,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1666,17 +2203,38 @@ export const hotels = [
         spa: false
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 22500,
+        image: "hotel-images/GlenburnTeaEstate/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 29500,
+        image: "hotel-images/GlenburnTeaEstate/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 38500,
+        image: "hotel-images/GlenburnTeaEstate/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/GlenburnTeaEstate/cover.jfif",
-        room: "hotel-images/GlenburnTeaEstate/1.jfif",
         pool: "hotel-images/GlenburnTeaEstate/2.jpg",
         restaurant: "hotel-images/GlenburnTeaEstate/3.jfif"
     },
@@ -1697,8 +2255,6 @@ export const hotels = [
     rating: 4.4,
     reviews: 1840,
 
-    price: 6200,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1708,17 +2264,30 @@ export const hotels = [
         spa: false
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 6200,
+        image: "hotel-images/SummitSwissHeritage/del.jfif",
         guests: 2,
-        bed: "1 Queen Bed",
+        bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 8000,
+        image: "hotel-images/SummitSwissHeritage/exe.jfif",
+        guests: 3,
+        bed: "2 King Beds",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/SummitSwissHeritage/cover.jfif",
-        room: "hotel-images/SummitSwissHeritage/1.jfif",
         pool: "hotel-images/SummitSwissHeritage/2.jfif",
         restaurant: "hotel-images/SummitSwissHeritage/3.jfif"
     },
@@ -1739,8 +2308,6 @@ export const hotels = [
     rating: 4.4,
     reviews: 1520,
 
-    price: 6900,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1750,17 +2317,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 6900,
+        image: "hotel-images/SterlingDarjeeling/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 9000,
+        image: "hotel-images/SterlingDarjeeling/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/SterlingDarjeeling/cover.jfif",
-        room: "hotel-images/SterlingDarjeeling/1.jfif",
         pool: "hotel-images/SterlingDarjeeling/2.jpg",
         restaurant: "hotel-images/SterlingDarjeeling/3.jfif"
     },
@@ -1784,8 +2364,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 3250,
 
-    price: 24500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1795,17 +2373,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 24500,
+        image: "hotel-images/TajMadikeriResortSpa/del.jfif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 32000,
+        image: "hotel-images/TajMadikeriResortSpa/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 41500,
+        image: "hotel-images/TajMadikeriResortSpa/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/TajMadikeriResortSpa/cover.jfif",
-        room: "hotel-images/TajMadikeriResortSpa/1.jfif",
         pool: "hotel-images/TajMadikeriResortSpa/2.jfif",
         restaurant: "hotel-images/TajMadikeriResortSpa/3.jfif"
     },
@@ -1826,8 +2425,6 @@ export const hotels = [
     rating: 4.9,
     reviews: 2120,
 
-    price: 28500,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1837,17 +2434,38 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
+        name: "Deluxe Room",
+        price: 28500,
+        image: "hotel-images/EvolveBackCoorg/del.avif",
+        guests: 2,
+        bed: "1 Queen Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
+        name: "Executive Room",
+        price: 37000,
+        image: "hotel-images/EvolveBackCoorg/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+        },
+        {
         name: "Luxury Suite",
+        price: 48500,
+        image: "hotel-images/EvolveBackCoorg/lux.jfif",
         guests: 4,
         bed: "1 King Bed + Living Area",
         breakfast: true,
         refundable: true
-    },
+        }
+    ],
 
     images: {
         cover: "hotel-images/EvolveBackCoorg/cover.jfif",
-        room: "hotel-images/EvolveBackCoorg/1.jfif",
         pool: "hotel-images/EvolveBackCoorg/2.jfif",
         restaurant: "hotel-images/EvolveBackCoorg/3.jfif"
     },
@@ -1868,8 +2486,6 @@ export const hotels = [
     rating: 4.8,
     reviews: 1820,
 
-    price: 19800,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1879,17 +2495,29 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 19800,
+        image: "hotel-images/TheTamaraCoorg/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 25500,
+        image: "hotel-images/TheTamaraCoorg/lux.jfif",
+        guests: 4,
+        bed: "1 King Bed + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
 
     images: {
         cover: "hotel-images/TheTamaraCoorg/cover.jfif",
-        room: "hotel-images/TheTamaraCoorg/1.jfif",
         pool: "hotel-images/TheTamaraCoorg/2.jfif",
         restaurant: "hotel-images/TheTamaraCoorg/3.jfif"
     },
@@ -1910,8 +2538,6 @@ export const hotels = [
     rating: 4.5,
     reviews: 4860,
 
-    price: 9200,
-
     amenities: {
         wifi: true,
         pool: true,
@@ -1921,17 +2547,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 9200,
+        image: "hotel-images/ClubMahindraMadikeri/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 12000,
+        image: "hotel-images/ClubMahindraMadikeri/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/ClubMahindraMadikeri/cover.jfif",
-        room: "hotel-images/ClubMahindraMadikeri/1.jfif",
         pool: "hotel-images/ClubMahindraMadikeri/2.jfif",
         restaurant: "hotel-images/ClubMahindraMadikeri/3.jfif"
     },
@@ -1955,8 +2594,6 @@ export const hotels = [
     rating: 4.7,
     reviews: 1640,
 
-    price: 13200,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -1966,17 +2603,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Executive Room",
+        price: 13200,
+        image: "hotel-images/SavoyOoty/exe.jfif",
         guests: 3,
         bed: "1 King Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Luxury Suite",
+        price: 17000,
+        image: "hotel-images/SavoyOoty/lux.jfif",
+        guests: 4,
+        bed: "2 Queen Beds + Living Area",
+        breakfast: true,
+        refundable: true
+        }
+    ],
+
 
     images: {
         cover: "hotel-images/SavoyOoty/cover.jfif",
-        room: "hotel-images/SavoyOoty/1.jfif",
         pool: "hotel-images/SavoyOoty/2.jfif",
         restaurant: "hotel-images/SavoyOoty/3.jfif"
     },
@@ -1997,8 +2647,6 @@ export const hotels = [
     rating: 4.5,
     reviews: 1680,
 
-    price: 8100,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -2008,17 +2656,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 8100,
+        image: "hotel-images/FortuneResort/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 10500,
+        image: "hotel-images/FortuneResort/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/FortuneResort/cover.jfif",
-        room: "hotel-images/FortuneResort/1.jfif",
         pool: "hotel-images/FortuneResort/2.jfif",
         restaurant: "hotel-images/FortuneResort/3.jpg"
     },
@@ -2039,8 +2700,6 @@ export const hotels = [
     rating: 4.4,
     reviews: 2450,
 
-    price: 7600,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -2050,17 +2709,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 7600,
+        image: "hotel-images/SterlingOotyFernHill/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 10000,
+        image: "hotel-images/SterlingOotyFernHill/exe.jfif",
+        guests: 3,
+        bed: "1 King Bed",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/SterlingOotyFernHill/cover.jfif",
-        room: "hotel-images/SterlingOotyFernHill/1.jfif",
         pool: "hotel-images/SterlingOotyFernHill/2.jfif",
         restaurant: "hotel-images/SterlingOotyFernHill/3.jfif"
     },
@@ -2081,8 +2753,6 @@ export const hotels = [
     rating: 4.3,
     reviews: 1320,
 
-    price: 7200,
-
     amenities: {
         wifi: true,
         pool: false,
@@ -2092,17 +2762,30 @@ export const hotels = [
         spa: true
     },
 
-    room: {
+    room: [
+        {
         name: "Deluxe Room",
+        price: 7200,
+        image: "hotel-images/GemParkOoty/del.jfif",
         guests: 2,
         bed: "1 Queen Bed",
         breakfast: true,
         refundable: true
-    },
+        },
+        {
+        name: "Executive Room",
+        price: 9500,
+        image: "hotel-images/GemParkOoty/exe.jfif",
+        guests: 3,
+        bed: "2 Queen Beds",
+        breakfast: true,
+        refundable: true
+    }
+    ],
+
 
     images: {
         cover: "hotel-images/GemParkOoty/cover.jpg",
-        room: "hotel-images/GemParkOoty/1.jfif",
         pool: "hotel-images/GemParkOoty/2.jfif",
         restaurant: "hotel-images/GemParkOoty/3.jfif"
     },
@@ -2131,7 +2814,7 @@ export const amenityIcons = {
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-utensils-icon lucide-utensils"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>`,
 
   parking: `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-van-icon lucide-van"><path d="M13 6v5a1 1 0 0 0 1 1h6.102a1 1 0 0 1 .712.298l.898.91a1 1 0 0 1 .288.702V17a1 1 0 0 1-1 1h-3"/><path d="M5 18H3a1 1 0 0 1-1-1V8a2 2 0 0 1 2-2h12c1.1 0 2.1.8 2.4 1.8l1.176 4.2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>`
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-parking-icon lucide-square-parking"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>`
 };
 
 export const hotelRatingDetails = {

@@ -2,16 +2,6 @@
     box-sizing: border-box;
 }
 
-
-@media (min-width: 1200px){
-    .hotel-details{
-        padding: 25px 100px !important;
-    }
-    .booking-card{
-        height: 400px;
-    }
-}
-
 :root{
     --primary-color: #33865E;
     --secondary-color: rgb(79, 75, 75);
@@ -28,6 +18,10 @@
     grid-template-columns: 2fr 1fr 300px;
     gap: 15px;
     align-items: start;
+}
+
+.hotel-head, .hotel-info, .similar-hotels{
+    grid-column: 1 / 3;
 }
 
 .main-img img{
@@ -78,6 +72,8 @@
     color: rgb(86, 61, 14);
     font-size: 13px;
     font-weight: 600;
+    display: flex;
+    gap: 2px;
 }
 
 .hotel-city svg{
@@ -86,18 +82,16 @@
     color: #2563EB;
 }
 
-.rating-title{
-    display: flex;
-    gap: 2px;
-}
-
 .booking-card{
     padding: 12px 16px 10px 16px;
-    border:1px solid #a29f9f;
+    border: 1px solid #a29f9f;
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 1 / -1;
     border-radius: 8px;
+    max-height: 400px;
+    background: #fff;
 }
+
 .priceNight{
     display: flex;
     flex-direction: column;
@@ -110,15 +104,15 @@
     padding: 10px 0px;
     margin: 10px 0px;
 }
+
 .amenities-list{
     display: flex;
     align-items: center;
     font-size: 13px;
-    gap:12px;
+    gap: 12px;
     margin-bottom: 20px;
     flex-wrap: wrap;
-}   
-
+}
 
 .main-title{
     display: flex;
@@ -148,8 +142,9 @@
     font-weight: 520;
     align-items: center;
 }
+
 .pricetag svg{
-    width: 16px;
+    width: 20px;
 }
 
 #perN, #taxfee{
@@ -169,23 +164,22 @@
     font-weight: 600;
 }
 
-
 .booking-dates input::placeholder, input[type="date"]{
     font-size: 12px;
     color: #767575;
     border: none;
-    border-bottom:1px solid #222;
+    border-bottom: 1px solid #222;
     width: 100%;
     max-width: 200px;
     background: none;
 }
-.booking-dates input::placeholder, input[type="date"]::-webkit-calendar-picker-indicator:hover{
-    cursor:pointer;
+
+.booking-dates input[type="date"]::-webkit-calendar-picker-indicator:hover{
+    cursor: pointer;
 }
 
 .booking-dates{
     font-size: 14px;
-    grid-column: 2;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -193,6 +187,7 @@
     padding: 12px 10px;
     border-radius: 12px;
 }
+
 .dates{
     display: flex;
     flex-direction: column;
@@ -219,14 +214,13 @@
     font-size: 13px;
 }
 
-.booking-room-info input[type="Number"]{
+.booking-room-info input[type="number"]{
     width: 30px;
     border: none;
     border-bottom: 1px solid #222;
     background: none;
     text-align: center;
 }
-
 
 .booking-room-info{
     font-size: 13px;
@@ -251,7 +245,7 @@
 
 .book-now:hover{
     cursor: pointer;
-    background:#2D7553;
+    background: #2D7553;
     transform: translateY(-1px);
 }
 
@@ -260,6 +254,11 @@
     font-size: 16px;
     color: black;
 }
+
+#price-per-night{
+    font-size: 25px;
+}
+
 
 .finalprice, #price-val{
     color: blue;
@@ -308,22 +307,21 @@
 .hotel-desc p{
     font-size: 14px;
 }
-.hotel-head{
-    grid-column: 1 / span 3;
-}
 
 .info-top{
     display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 2rem;
-    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
+    margin-top: 20px;
 }
 
 .hotel-ratings{
     padding: 12px 16px;
     border: 1px solid var(--light-grey);
     border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .rat-rev-head h2{
@@ -333,14 +331,14 @@
 
 .rat-rev{
     display: flex;
-    align-items: center;
     gap: 10px;
+    flex-direction: column;
 }
 
 .rating-head{
-    font-size:30px;
-    color: var(--primary-color);
-    font-weight:600;
+    font-size: 50px;
+    color: royalblue;
+    font-weight: 600;
 }
 
 .review{
@@ -359,15 +357,15 @@
     width: 100%;
     border: 1px solid var(--primary-color);
     max-width: 200px;
-
 }
+
 .rating-fill{
     border-radius: 999px;
     height: 100%;
     background: var(--primary-color);
 }
 
-#rating-val{
+.rating-val{
     font-weight: 600;
     text-align: right;
 }
@@ -378,50 +376,145 @@
     align-items: center;
 }
 
+.room-card{
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    padding: 15px 8px;
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    /*box-shadow: 0px 8px 15px rgba(0,0,0,0.06)*/
+}
 
-@media (min-width: 769px) and (max-width: 992px) {
+.room-card img{
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.room-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-price button{
+    margin-top: 30px;
+
+}
+
+@media (min-width: 993px){
+    .booking-card{
+        position: sticky;
+        top: 100px;
+        align-self: start;
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1200px){
+    .hotel-details{
+        padding: 25px 100px !important;
+    }
+}
+
+@media (max-width: 992px) {
     .gallery-booking {
         grid-template-columns: 2fr 1fr;
     }
 
-    .booking-card {
-        grid-column: 1/-1;
-        grid-row: 3;
+    .hotel-head, .hotel-info, .similar-hotels, .booking-card{
+        grid-column: 1 / -1;
     }
+
     .booking-card{
+        position: static;
+        grid-row: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: start;
         align-content: start;
+        grid-row: 3;
     }
+
     .booking-room-info{
         grid-column: 1;
         grid-row: 2;
     }
-    .hotel-head{
-        grid-column: 1 / -1;
-    }
+
     .info-top{
         grid-template-columns: 1fr 1fr;
         align-items: start;
         align-content: start;
-        box-sizing: border-box;
+    }
+
+    .hotel-ratings{
+        grid-template-columns: 1fr;
+    }
+
+    .rating-head{
+        font-size: 40px;
+    }
+
+    .rat-rev{
+        flex-direction: row;
+        align-items: center;
     }
 }
 
-
 @media (max-width: 768px) {
+
+    .room-card{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .room-card img{
+        width: 100%;
+        height: 200px;
+        margin: 0;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .room-price{
+        display: grid;
+        border-top: 1px solid #e5e5e5;
+        padding-top: 12px;
+    }
+
+    .select-room-btn{
+        width: 100%;
+    }
+
     .gallery-booking {
         grid-template-columns: 1fr;
     }
 
-    .hotel-head{
-        grid-column:auto;
-        grid-row:auto;
+    .rating-head{
+        font-size: 30px;
+    }
+
+    .hotel-ratings{
+        grid-template-columns: 1fr;
     }
 
     .info-top{
         grid-template-columns: 1fr;
+    }
+
+    #price-per-night{
+        font-size: 20px;
+    }
+
+    .pricetag svg{
+        width: 16px;
     }
 
     .booking-card {
@@ -429,11 +522,12 @@
         bottom: 0;
         left: 0;
         right: 0;
-        grid-column:auto;
-        grid-row:auto;
-        height: 60px;
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 60px;
+        height: auto;
         background: rgb(26, 25, 25);
-        box-sizing:border-box;
+        box-sizing: border-box;
 
         display: flex;
         justify-content: space-between;
@@ -441,10 +535,12 @@
         color: white;
         z-index: 1000;
     }
-    .booking-card{
-        min-height: 60px;
-        height: auto;
+
+    .amenity-list{
+        margin-bottom: 0;
     }
+
+
     .book-now{
         margin: 0;
         width: auto;
@@ -459,6 +555,7 @@
     .hotel-details {
         padding-bottom: 90px;
     }
+
     .booking-dates, .booking-room-info, .booking-guests, .booking-price{
         display: none;
     }
@@ -475,15 +572,18 @@
     }
 
     .other-images img{
-        width:100%;
-        height:200px;
-        object-fit:cover;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
     }
 
     .amenities-list{
         flex-wrap: wrap;
-        gap: 12px 20px; 
+        gap: 12px 20px;
     }
 
+    .rat-rev{
+        flex-direction: row;
+        align-items: center;
+    }
 }
-
