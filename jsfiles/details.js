@@ -83,6 +83,7 @@ if(hotel){
   `)
   .join("");
 
+    const rtypeselected=document.querySelector(".rtypeselected");
 
     let selectedRoom = [...hotel.room].sort((a, b) => a.price - b.price)[0];
 
@@ -91,6 +92,8 @@ if(hotel){
     priceval.textContent=`${selectedRoom.price.toLocaleString("en-IN")}`;
 
     guests.innerHTML=`${selectedRoom.guests} Guests`;
+
+    rtypeselected.innerHTML+=`${selectedRoom.name}`;
 
     description.innerHTML+=`<p>${hotel.description}</p>`;
 
@@ -119,7 +122,6 @@ if(hotel){
         bookingDates.style.width = "100%";
         bookingDates.style.maxWidth = "250px";
 
-        // Show alert immediately
         if (window.innerWidth > 768) {
             datesAlerting.style.display = "flex";
         } else {
@@ -128,6 +130,8 @@ if(hotel){
 
         return 0;
     }
+
+    
 
     bookingDates.style.border = "none";
     datesAlerting.style.display = "none";
@@ -204,28 +208,73 @@ if(hotel){
 `)
 .join("");
 
+
     document.querySelectorAll(".select-room-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const idx = Number(btn.dataset.index);
-            selectedRoom = hotel.room[idx];
-            totalPrice = selectedRoom.price;
+    btn.addEventListener("click", () => {
 
-            priceper.textContent = `${selectedRoom.price.toLocaleString("en-IN")}`;
-            guestCount.textContent = `${selectedRoom.guests * Number(roomsInput.value)} Guests`;
-            updateGuests();
-            updateTotal();
+        document.querySelectorAll(".select-room-btn").forEach(b => {
+            b.textContent = "Select";
+            b.style.background = "rgb(79, 110, 231)";
+            b.style.color = "white";
+            b.style.border = "none";
+        });
 
-            if (window.innerWidth > 768) {
-            document.querySelector(".booking-card").scrollIntoView({
+        document.querySelectorAll(".room-card").forEach(card => {
+            card.style.border = "1px solid #a29f9f";
+        });
+
+        btn.textContent = "Selected";
+        btn.style.background = "none";
+        btn.style.color = "rgb(60, 94, 186)";
+        btn.style.border = "1px solid blue";
+
+        const card = btn.closest(".room-card");
+        card.style.border = "2px solid rgb(162, 179, 228)";
+
+        const idx = Number(btn.dataset.index);
+        selectedRoom = hotel.room[idx];
+        totalPrice = selectedRoom.price;
+        
+        rtypeselected.innerHTML=`<span id="mulsym">&times;</span>${selectedRoom.name}`;
+        priceper.textContent = selectedRoom.price.toLocaleString("en-IN");
+        guestCount.textContent = `${selectedRoom.guests * Number(roomsInput.value)} Guests`;
+
+        updateGuests();
+        updateTotal();
+        const hoteldesc=document.querySelector(".hotel-desc");
+
+        if (window.innerWidth > 768) {
+            hoteldesc.scrollIntoView({
                 behavior: "smooth",
                 block: "start"
             });
         }
-        });
     });
+});
 
 updateGuests();
 updateTotal();
+
+window.addEventListener("resize", () => {
+
+    if (window.innerWidth <= 768) {
+        datesAlerting.style.display = "none";
+        bookNowBtn.addEventListener("click", ()=>{
+            datesAlerting.style.display="flex";
+        });
+    } else {
+        datesAlerting.style.display = "flex";
+    }
+});
+
+const bookingCard = document.querySelector(".booking-card");
+
+const bookingToggle = document.querySelector(".toggle-booking");
+
+bookingToggle.addEventListener("click", () => {
+    bookingCard.classList.toggle("active");
+});
+
 const today = new Date().toISOString().split("T")[0];
 checkin.min = today;
 checkout.min = today;
@@ -243,3 +292,5 @@ roomsInput.addEventListener("change", () =>{
 });
 
 }
+
+
