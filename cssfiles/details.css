@@ -381,7 +381,7 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 5px;
+    gap: 20px;
     padding: 15px 8px;
     margin-top: 20px;
     background: #fff;
@@ -403,10 +403,108 @@
     align-items: center;
 }
 
+.room-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.room-info h3{
+    font-weight: 600;
+}
+
+.room-rate{
+    display: flex;
+    color: #1F2937;
+    font-weight: 700;
+}
+
+.room-price span{
+    color: rgb(92, 83, 83);
+    font-size: 13px;
+}
+
+.room-price svg{
+    width: 16px;
+}
+
 .room-price button{
     margin-top: 30px;
+}
+
+#guests, #bed{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+}
+
+#guests svg, #bed svg{
+    width: 16px;
+    color: rgb(129, 126, 126);
+}
+
+.breakfast, .refundable{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #c6f7ca;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    width: fit-content;
+    color: rgb(18, 73, 15);
+    font-weight: 500;
+}
+
+.breakfast svg{
+    width: 12px;
+    height: 12px;
+}
+
+.refundable svg{
+    width: 12px;
+    height: 12px;;
+}
+
+.room-note{
+    background: #F3FAF6;
+    border-left: 4px solid #5F8D7A;
+    color: #365B4A;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+#notehead{
+    color: #2F6B55;
+    font-weight: 700;
+    font-size: 15px;
 
 }
+
+.select-room-btn{
+    padding: 8px 11px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(79, 110, 231);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.select-room-btn:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+.select-room-btn:active{
+    transform: translateY(2px);
+}
+
 
 @media (min-width: 993px){
     .booking-card{
