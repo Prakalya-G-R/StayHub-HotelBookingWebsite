@@ -55,6 +55,8 @@ body{
     list-style-type: none;
     position: relative;
     z-index: 1000;
+    align-items: center;
+    margin-top: 10px;
 }
 
 
@@ -76,6 +78,7 @@ body{
     background: #33865E;
     border-radius: 7px;
     font-weight: 500;
+    margin-top: 5px;
 }
 .menu-close{
     display: none;
@@ -114,7 +117,7 @@ body{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 30px;
+    padding: 15px 30px;
     background: rgb(26, 25, 25, 0.9);
 }
 
@@ -150,7 +153,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .menu-item a{

@@ -276,6 +276,7 @@ input[type="radio"]{
     padding-top: 20px;
 }
 
+
 input[type="range"]{
     accent-color: var(--primary-color);
     height: 3px;
@@ -418,16 +419,19 @@ input[type="checkbox"]{
 }
 
 .hotel-card{
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.12);
+    border: 1px solid rgb(219, 219, 219);
     position: relative;
     border-radius: 8px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .hotel-card:hover{
     transform: translateY(-3px);
     transition: all 0.3s ease;
-    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
 }
 
 
@@ -445,12 +449,12 @@ input[type="checkbox"]{
 }
 
 .hotel-name{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     word-break: break-word;
 }
 .hotel-city{
-    font-size: 14px;
+    font-size: 12px;
     color: #222;
     padding-top: 3px;
     display: flex;
@@ -458,7 +462,7 @@ input[type="checkbox"]{
 }
 
 .hotel-city svg{
-    width: 18px;
+    width: 14px;
     color: var(--primary-color);
 }
 
@@ -486,14 +490,29 @@ input[type="checkbox"]{
 .hotel-amenities{
     display: flex;
     gap: 5px;
-    font-size: 14px;
+    font-size: 12px;
     padding-top: 3px;
     color: #222;
     word-break: break-word;
 }
 
+.amenity{
+    color: rgb(115, 100, 23);
+    font-weight: 500;
+    padding: 2px 5px;
+    background: rgb(242, 233, 176);
+    border-radius: 5px;
+}
+
 .close-menu{
     display: none;
+}
+
+.per-night{
+    color: rgb(84, 82, 82);
+    font-size: 12px !important;
+    font-weight: 500;
+    margin-left: 5px;
 }
 
 .hotel-price{

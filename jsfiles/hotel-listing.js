@@ -1,4 +1,19 @@
+const toggle=document.querySelector(".nav-toggle");
+const menu=document.querySelector(".nav-menu");
+const close=document.querySelector(".menu-close");
+
+toggle.addEventListener("click", ()=>{
+    menu.classList.add("active");
+    toggle.style.display="none";
+});
+
+close.addEventListener("click", ()=>{
+    menu.classList.remove("active");
+    toggle.style.display="flex";
+});
+
 import {hotels} from "./hotels.js";
+
 
 const sortedHotels = [...hotels];
 sortedHotels.sort((a,b)=>a.recommended-b.recommended);
@@ -28,8 +43,12 @@ function ListHotels(sortedHotels){
     const amenities = priority
         .filter(key => hotel.amenities[key])
         .slice(0, 3)                     
-        .map(key => amenityNames[key])
-        .join(" • ");
+        .map(key => `
+        <span class="amenity" id="${key}">
+            ${amenityNames[key]}
+        </span>
+    `)
+        .join("");
         hotelList.innerHTML+=`
         <div class="hotel-card" data-id="${hotel.id}">
         <img id="hotel-image" src="${hotel.images.cover}" alt="${hotel.name}">
@@ -46,11 +65,86 @@ function ListHotels(sortedHotels){
     });
 }
 
-ListHotels(sortedHotels);
+const checkindate = document.getElementById("checkin");
+const checkoutdate = document.getElementById("checkout");
+const today = new Date().toISOString().split("T")[0];
+
+    checkindate.min = today;
+    checkoutdate.min = today;
+
+    checkindate.addEventListener("change", () => {
+    checkoutdate.min = checkindate.value;
+
+    if (checkoutdate.value && checkoutdate.value < checkindate.value) {
+        checkoutdate.value = "";
+    }
+});
+
+const form=document.querySelector(".searchcontent");
+
+form .addEventListener("submit", (e) =>{
+    e.preventDefault();
+
+    const destination=document.getElementById("destsearch").value.trim();
+    const checkin=document.getElementById("checkin").value;
+    const checkout=document.getElementById("checkout").value;
+    const guests=document.getElementById("guests").value;
+    const rooms=document.getElementById("rooms").value;
+
+    const params=new URLSearchParams({
+        city: destination,
+        checkin, checkout, guests, rooms 
+    });
+    window.location.href=`hotels.html?${params.toString()}`;
+});
+
+const params = new URLSearchParams(window.location.search);
+const city = params.get("city");
+const checkin = params.get("checkin");
+const checkout = params.get("checkout");
+const guests = Number(params.get("guests"));
+const rooms = Number(params.get("rooms"));
+
+let hotelsToDisplay = sortedHotels;
+
+if (city) {
+    hotelsToDisplay = sortedHotels.filter(hotel => hotel.city.toLocaleLowerCase() === city.toLocaleLowerCase());
+}
+
+
+function fillSearchBar() {
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById("destsearch").value = params.get("city") || "";
+    document.getElementById("checkin").value = params.get("checkin") || "";
+    document.getElementById("checkout").value = params.get("checkout") || "";
+    document.getElementById("guests").value = params.get("guests") || "";
+    document.getElementById("rooms").value = params.get("rooms") || "";
+}
+
+fillSearchBar();
+
+ListHotels(hotelsToDisplay);
 
 document.querySelectorAll(".hotel-card").forEach(card=>{
-    card.addEventListener("click" , ()=>{
-        const id = card.dataset.id;
-        window.location.href=`hotel_details.html?id=${id}`
+    card.addEventListener("click" , (e)=>{
+        e.preventDefault();
+
+    const destination=card.querySelector(".hotel-name").textContent.trim();
+    const checkin=document.getElementById("checkin").value;
+    const checkout=document.getElementById("checkout").value;
+    const guests=document.getElementById("guests").value;
+    const rooms=document.getElementById("rooms").value;
+    const id = card.dataset.id;
+
+        
+
+    const params=new URLSearchParams({
+        city: destination,
+        id,
+        checkin, checkout, guests, rooms 
+    });
+    window.location.href=`hotel_details.html?${params.toString()}`;
+        
     });
 });

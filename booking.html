@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssfiles/booking.css">
+    <link rel="stylesheet" href="cssfiles/common.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap" rel="stylesheet">
+    <title>Hotels Page</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="48" height="48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 15 C28 15 12 35 12 60 C12 77 27 90 50 90 C73 90 88 77 88 60 C88 35 72 15 50 15 Z"/><path d="M50 15 C48 35 48 58 50 90"/><path d="M36 20 C40 40 40 62 34 84"/><path d="M64 20 C60 40 60 62 66 84"/><path d="M24 32 C32 48 34 66 30 84"/><path d="M76 32 C68 48 66 66 70 84"/></svg>
+                Cove
+            </div>
+        </div>
+        <div class="nav-toggle">
+            <div class="hamburger">
+                <svg id="hambar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <div class="menu-close">
+                <svg id="close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </div>
+            <li class="menu-item"><a href="index.html#home">Home</a></li>
+            <li class="menu-item"><a href="hotels.html">Hotels</a></li>
+            <li class="menu-item"><a href="index.html#destinations">Destinations</a></li>
+            <li class="menu-item" id="bookings-link" style="display: none;">
+        <a href="#">My Bookings</a>
+    </li>
+            <li class="menu-item"><a href="index.html#about">About</a></li>
+            <li id="loginbtn" class="menu-item"><a href="#">Login</a></li>
+        </ul>
+
+        <a href="#" class="loginout">Login</a>
+    </nav>
+    <div class="booking-container">
+        <div class="stepper">
+            <div class="step active"><span>1</span>Details</div>
+            <div class="line"></div>
+            <div class="step"><span>2</span>Payment</div>
+            <div class="line"></div>
+            <div class="step"><span>3</span>Confirmation</div>
+        </div>
+
+        <div class="selected-room">
+            <!--room-details-->
+        </div>
+
+        <!-- Step 1 -->
+        <section class="step-content active" id="details">
+            <div class="alert-info">
+                <p class="alert-qn">Who's checking in?</p>
+                <p class="alert-cap"><span id="note-head">Note: </span>This should match the ID that you'll bring at check-in
+            </div>
+            <form class="guest-form">
+                <div class="name">
+                    <div class="first-name">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="e.g. Aarav" required>
+                    </div>
+                    <div class="last-name">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="e.g. Sharma"required>
+                    </div>
+                </div>
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="phone-det">
+                    <div class="code">
+                        <label for="country-code">Code:</label>
+                        <select id="country-code">
+                            <option value="+91" selected>🇮🇳 India (+91)</option>
+                            <option value="+1">🇺🇸 United States (+1)</option>
+                            <option value="+44">🇬🇧 United Kingdom (+44)</option>
+                            <option value="+61">🇦🇺 Australia (+61)</option>
+                            <option value="+971">🇦🇪 UAE (+971)</option>
+                            <option value="+65">🇸🇬 Singapore (+65)</option>
+                            <option value="+49">🇩🇪 Germany (+49)</option>
+                            <option value="+33">🇫🇷 France (+33)</option>
+                            <option value="+81">🇯🇵 Japan (+81)</option>
+                            <option value="+86">🇨🇳 China (+86)</option>
+                            <option value="+60">🇲🇾 Malaysia (+60)</option>
+                            <option value="+66">🇹🇭 Thailand (+66)</option>
+                            <option value="+94">🇱🇰 Sri Lanka (+94)</option>
+                            <option value="+977">🇳🇵 Nepal (+977)</option>
+                            <option value="+880">🇧🇩 Bangladesh (+880)</option>
+                            <option value="+92">🇵🇰 Pakistan (+92)</option>
+                            <option value="+974">🇶🇦 Qatar (+974)</option>
+                            <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
+                            <option value="+968">🇴🇲 Oman (+968)</option>
+                            <option value="+64">🇳🇿 New Zealand (+64)</option>
+                        </select>
+                    </div>
+                    <div class="phone-no">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone No." required>
+                    </div>
+                </div>
+                <div class="special-req">
+                    <label for="special-requests">Special Requests <span>(optional)</span></label>
+                    <textarea id="special-requests" name="special-requests" placeholder="High floor, early check-in, etc."></textarea>
+                </div>
+            </form>
+            <button class="next-btn">Continue</button>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="step-content" id="payment">
+            <!-- Payment Form -->
+            <button class="back-btn">Back</button>
+            <button class="next-btn">Continue</button>
+        </section>
+        <!-- Step 3 -->
+        <section class="step-content" id="confirm">
+            <!-- Booking Success -->
+            <button class="back-btn">Back</button>
+        </section>
+
+    </div>
+
+
+
+
+    <script type="module" src="jsfiles/booking.js"></script>
+</body>
+</html>

@@ -109,12 +109,25 @@ if(hotel){
     const datesAlerting = document.querySelector(".dates-alerting");
     const alertMsg = document.querySelector(".dates-alert-msg");
 
+    checkin.value = params.get("checkin") || "";
+    checkout.value = params.get("checkout") || "";
+    roomsInput.value = params.get("rooms") || 1;
 
+    const searchGuests = Number(params.get("guests"));
+
+    const bookNowBtn = document.querySelector(".book-now");
 
     function updateGuests() {
+        if (searchGuests) {
+            guestCount.textContent = `${searchGuests} Guests`;
+
+        }
+        else{
         const total = selectedRoom.guests * Number(roomsInput.value);
         guestCount.textContent = `${total} Guests`;
+        }
     }
+
     function getNights() {
     if (!checkin.value || !checkout.value) {
 
@@ -207,7 +220,17 @@ if(hotel){
     </div>
 `)
 .join("");
+    const firstBtn = document.querySelector(".select-room-btn");
+    const firstCard = document.querySelector(".room-card");
 
+    if (firstBtn && firstCard) {
+        firstBtn.textContent = "Selected";
+        firstBtn.style.background = "none";
+        firstBtn.style.color = "rgb(60, 94, 186)";
+        firstBtn.style.border = "1px solid blue";
+
+        firstCard.style.border = "2px solid rgb(162, 179, 228)";
+    }
 
     document.querySelectorAll(".select-room-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -237,8 +260,6 @@ if(hotel){
         
         rtypeselected.innerHTML=`<span id="mulsym">&times;</span>${selectedRoom.name}`;
         priceper.textContent = selectedRoom.price.toLocaleString("en-IN");
-        guestCount.textContent = `${selectedRoom.guests * Number(roomsInput.value)} Guests`;
-
         updateGuests();
         updateTotal();
         const hoteldesc=document.querySelector(".hotel-desc");
@@ -252,16 +273,49 @@ if(hotel){
     });
 });
 
+if (searchGuests) {
+    guestCount.textContent = `${searchGuests} Guests`;
+}
+
 updateGuests();
 updateTotal();
+
+const similarHotels=hotels.filter(h => h.city === hotel.city && h.id!=hotel.id)
+.sort((a, b) =>b.rating - a.rating)
+.slice(0, 3);
+
+const simihotelcards=document.querySelector(".simi-hotel-cards");
+simihotelcards.innerHTML=similarHotels.map(h =>`
+    <div class="simCards" data-id="${h.id}">
+    <img src="${h.images.cover}" alt="${h.name}">
+    <div class="simi-hotel-card-content">
+            <h3>${h.name}</h3>
+
+            <p id="sim-loc"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin preview-icon"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>${h.city}</p>
+
+            <div class="sim-rating">
+                <span>${h.rating}</span>
+                <p>${h.reviews} reviews</p>
+            </div>
+
+            <p class="sim-price">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee preview-icon"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>${h.room[0].price.toLocaleString("en-IN")} <span>/night</span>
+            </p>
+        </div>
+    </div>
+    `).join("");
+
+document.querySelectorAll(".simCards").forEach(card => {
+    card.addEventListener("click", () => {
+        const id = card.dataset.id;
+        window.location.href = `hotel_details.html?id=${id}`;
+    });
+});
 
 window.addEventListener("resize", () => {
 
     if (window.innerWidth <= 768) {
         datesAlerting.style.display = "none";
-        bookNowBtn.addEventListener("click", ()=>{
-            datesAlerting.style.display="flex";
-        });
     } else {
         datesAlerting.style.display = "flex";
     }
@@ -273,6 +327,34 @@ const bookingToggle = document.querySelector(".toggle-booking");
 
 bookingToggle.addEventListener("click", () => {
     bookingCard.classList.toggle("active");
+});
+
+function checkfilled(){
+    if(!checkin.value || !checkout.value){
+    datesAlerting.style.display="flex";
+    return false;
+   }
+   else{
+    datesAlerting.style.display="none";
+    return true;
+   }
+}
+
+bookNowBtn.addEventListener("click", (e) =>{
+    e.preventDefault();
+    if(checkfilled()){
+    const params = new URLSearchParams({
+    id: hotel.id,
+    room: selectedRoom.name,
+    checkin: checkin.value,
+    checkout: checkout.value,
+    rooms: roomsInput.value,
+    guests: guestCount.textContent,
+    total: finalPrice.textContent
+    });
+
+    window.location.href = `booking.html?${params.toString()}`;
+    }
 });
 
 const today = new Date().toISOString().split("T")[0];
@@ -290,6 +372,7 @@ roomsInput.addEventListener("change", () =>{
     updateGuests();
     updateTotal();
 });
+
 
 }
 
