@@ -5,19 +5,28 @@
     --grey: #ccc;
 }
 
+.booking-container *,
+.booking-container *::before,
+.booking-container *::after{
+    box-sizing: border-box;
+}
 
 .booking-container{
     padding: 25px 30px;
     margin-top: 100px;
-    max-width: 600px;
-    margin: 100px auto 0;
+    background-color: white;
 }
 
-@media (min-width: 1200px){
-    .booking-container{
-        padding: 25px 300px !important;
-        max-width: 1200px;
-    }
+.booking-layout{
+    display: grid;
+    grid-template-columns: 2fr 300px;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.booking-left,
+.booking-right{
+    min-width: 0;
 }
 
 .stepper{
@@ -28,10 +37,10 @@
 
 .step-content{
     display: none;
-    margin-top: 40px;
     border: 1px solid var(--grey);
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 20px;
+    background-color: white;
 }
 
 .step-content.active{
@@ -43,7 +52,7 @@
 .guest-form{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
     max-width: 600px;
     justify-content: center;
@@ -65,6 +74,7 @@
 .name input,
 .phone-det input{
     flex: 1;
+    min-width: 0;
 }
 
 .code select{
@@ -81,7 +91,7 @@
 
 .email{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 12px;
 }
 
@@ -96,27 +106,27 @@
 }
 
 .special-req textarea{
+    width: 100%;
     height: 100px;
     border-radius: 8px;
     border: 1px solid #ccc;
     padding: 15px;
+    resize: vertical;
 }
 
-
-input ,textarea, select{
+input, textarea, select{
     border: 1px solid #ccc;
-    outline: none; 
+    outline: none;
     transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus, select:focus{
-    border: 1px solid #2563eb; /* your preferred color */
+    border: 1px solid #2563eb;
 }
-
 
 .step span{
     border: 2px solid #928f8f;
-    padding: 2px 10px;
+    padding: 2px 8px;
     border-radius: 50%;
     color: #787676;
     font-weight: 500;
@@ -127,44 +137,64 @@ input:focus, textarea:focus, select:focus{
     display: flex;
     flex-direction: row;
     gap: 3px;
+    justify-content: center;
     align-items: center;
     font-size: 12px;
     color: rgb(60, 60, 60);
 }
 
 .line{
-    width:60px;
-    height:3px;
-    background:#d1d5db;
-    margin:0 8px;
+    width: 100px;
+    height: 3px;
+    background: #d1d5db;
+    margin: 0 8px;
 }
-
-.line.active{
-    background: var(--secondary-color);
-}
-
 
 .step.active span{
     background: var(--secondary-color);
-    font-weight:600;
+    font-weight: 600;
     color: white;
     border-radius: 50%;
-    border:1px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);
 }
 
-.selected-room{
-    margin-top: 60px;
+.booking-summary{
     border: 1px solid var(--grey);
     padding: 15px;
-    height: 130px;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.booking-right{
+    position: sticky;
+    top: 110px;
+    align-self: start;
+}
+
+.hotel-rating{
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    gap: 2px;
+    background: var(--secondary-color);
+    color: white;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0px 2px;
+    font-weight: 500;
+}
+
+.hotel-rating svg{
+    width: 10px;
+    height: 10px;
 }
 
 .selected-room-content{
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
 }
 
 label{
@@ -182,7 +212,7 @@ label{
     color: grey;
 }
 
-.alert-qn{
+.alert-qn, .payment-head{
     font-size: 16px;
     font-weight: 600;
     margin-top: 5px;
@@ -190,7 +220,6 @@ label{
 
 .alert-cap{
     font-size: 13px;
-    color: grey;
     margin-top: 5px;
     margin-bottom: 15px;
     background: #f3f6fa;
@@ -198,7 +227,6 @@ label{
     color: var(--secondary-color);
     padding: 8px 16px;
     border-radius: 5px;
-    font-size: 13px;
 }
 
 #note-head{
@@ -208,11 +236,6 @@ label{
     margin-right: 3px;
 }
 
-.selectedRoomImg{
-    width: 150px;
-    height:100px;
-    border-radius: 8px;
-}
 
 .next-btn{
     margin-top: 20px;
@@ -224,65 +247,499 @@ label{
     border-radius: 8px;
     padding: 8px 15px;
     transition: all 0.3s ease;
+    margin-left: auto;
 }
 
-.next-btn:hover{
+.back-btn{
+    margin-top: 20px;
+    width: 200px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    gap: 12px;
+}
+
+.next-btn:hover, .back-btn:hover{
     cursor: pointer;
     transform: translateY(-3px);
 }
 
-.next-btn:active{
+.next-btn:active, .back-btn:active{
     transform: translateY(2px);
+}
+
+.step.completed{
+    font-weight: 600;
+}
+
+.step.completed span{
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.line.completed{
+    background: var(--secondary-color);
 }
 
 .selected-room-names{
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
-.room-name{
+.selected-room-info{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+
+.room-tot-rup{
+    display: flex;
+    align-items: center;
+}
+
+.room-tot-rup svg{
+    width: 13px;
+    height: 13px;
+}
+
+.stay-details, .price-breakdown{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: black;
+    font-weight: 400;
+    gap: 5px;
+}
+
+.checkin-out, .other-stay-det, .price-breakdown{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price-breakdown-head{
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.price-breakdown{
+    font-weight: 500;
+}
+
+#roomdis{
+    color: green;
+}
+
+::-webkit-input-placeholder{
+    color: #c6c4c4;
+}
+
+#checkin-head, #checkout-head, #snights, #sguests, #srooms, #room-price, #taxes-fees, #dis{
+    font-size: 12px;
+    color: #555;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stay-details svg{
+    width: 13px;
+    height: 13px;
+}
+
+.selectedHotelImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.hotel-name{
     font-size: 15px;
     font-weight: 500;
 }
 
-.hotel-name{
+.room-name{
     display: flex;
     flex-direction: column;
     font-size: 13px;
-    font-weight: 500;
-    color: green;
+    font-weight: 400;
+    gap: 3px;
 }
 
-.hotel-name span{
+.room-name span{
     font-size: 12px;
     color: grey;
 }
 
-.selected-room-details{
-    display: flex;
-    gap: 10px;
-}
-
-.selected-checkin-out{
-    font-size: 12px;
-    color: grey;
-}
-
-.selected-guests{
-    font-size: 12px;
-    color: grey;
-}
-
-.total{
-    margin-left: 70px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    color: var(--secondary-color);
-    margin-top: 25px;
-}
 
 .selected-total svg{
     width: 13px;
     height: 13px;
+}
+
+.payment-methods{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.method{
+    width: 150px;
+    height: 80px;
+    gap: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .2s ease;
+    color: black;
+}
+
+.method:hover{
+    transform: translateY(-3px);
+}
+
+.method:active{
+    transform: translateY(2px);
+}
+
+.method svg{
+    width: 20px;
+}
+
+.method.active{
+    border: 2px solid #7fa3f1;
+    background: #e5f0ff;
+    color: #2563eb;
+}
+
+.payment-panel{
+    display: none;
+}
+
+.payment-panel.active{
+    display: block;
+}
+
+.card-title, .upi-title, .netbanking-title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.payment-panel input,
+.payment-panel select{
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.card-row{
+    display: flex;
+    gap: 15px;
+}
+
+.card-row > *{
+    flex: 1;
+    min-width: 0;
+}
+
+.card-logos svg{
+    width: 35px;
+}
+
+.upi-logos svg, .netbanking-logos svg{
+    width: 20px;
+}
+
+#so-on{
+    background-color: rgb(214, 211, 211);
+    padding: 1px 6px;
+    border-radius: 50%;
+}
+
+.card-title p, .upi-title p, .netbanking-title p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.divider{
+    display: block;
+    border-bottom: 1px solid #eae6e6;
+}
+
+#city{
+    display: flex;
+    align-items: center;
+    color: rgb(99, 97, 97);
+}
+
+#city svg{
+    width: 11px;
+    height: 11px;
+}
+
+.booking-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.booking-title{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.edit-booking{
+    font-size: 12px;
+    color: rgb(97, 95, 95);
+    text-decoration: underline;
+}
+
+.stay-details p, .price-breakdown p{
+    display: flex;
+    justify-content: space-between;
+}
+
+#dis{
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    color: rgb(186, 56, 114);
+    font-weight: 500;
+    gap: 2px;
+}
+
+#dis svg{
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+    color: rgb(186, 56, 114);
+}
+
+
+@media (min-width: 1200px){
+    .booking-container{
+        padding: 25px 200px !important;
+    }
+
+    .line{
+        width: 200px !important;
+    }
+    .name{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .phone-det select{
+        width: 125px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .booking-container{
+        padding: 20px 16px;
+        margin-top: 80px;
+    }
+
+    .booking-layout{
+        grid-template-columns: 1fr;
+        margin-top: 24px;
+    }
+
+    .booking-right{
+        order: -1;
+        position: static;
+        top: auto;
+    }
+
+    .booking-summary{
+        position: static;
+        z-index: 1;
+        background-color: white;
+    }
+
+    .selected-room-content{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        height: auto;
+        width: 100%;
+    }
+
+
+    .selected-room-info{
+        flex: 1;
+        min-width: 0;
+    }
+
+    .selectedHotelImg{
+        width: 100px;
+        height: 75px;
+        flex-shrink: 0;
+    }
+
+    .selected-room-names{
+        min-width: 0;
+    }
+
+    .stepper{
+        width: 100%;
+    }
+
+    .line{
+        width: auto;
+        flex: 1;
+        min-width: 12px;
+        max-width: 80px;
+        margin: 0 4px;
+    }
+
+    .step{
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 552px){
+
+    .booking-container{
+        padding: 16px 12px;
+        margin-top: 70px;
+    }
+    
+    .booking-summary{
+        padding: 12px;
+    }
+
+    .step-content{
+        padding: 14px;
+    }
+
+    .step{
+        font-size: 11px;
+    }
+
+    .step.active{
+        font-weight: 600;
+    }
+
+    .line{
+        max-width: 40px;
+    }
+
+    .name,
+    .phone-det{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .code select{
+        width: 100%;
+    }
+
+    .email{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+   
+    input, textarea, select{
+        font-size: 16px;
+    }
+
+    
+    .selected-room-content{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        height: auto;
+        width: 100%;
+    }
+
+    #divider{
+        display: none;
+    }
+
+    .selected-room-info{
+        flex: 1;
+        min-width: 0;
+    }
+
+    .selectedHotelImg{
+        width: 90px;
+        height: 70px;
+    }
+
+    .total{
+        margin-left: 0;
+    }
+
+    .payment-methods{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .method{
+        width: 100%;
+        height: 70px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .card-row{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .btns{
+        gap: 10px;
+    }
+
+    .next-btn,
+    .back-btn{
+        width: auto;
+        flex: 1;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 12px 15px;
+    }
 }

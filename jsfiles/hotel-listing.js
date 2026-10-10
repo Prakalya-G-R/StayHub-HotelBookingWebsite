@@ -22,6 +22,9 @@ function ListHotels(sortedHotels){
     const hotelList=document.getElementById("hotel-list");
     hotelList.innerHTML="";
 
+    const hotelCount = document.getElementById("hotel-count");
+    hotelCount.textContent = `(${sortedHotels.length})`;
+
     sortedHotels.forEach(hotel=>{
     const priority = [
         "wifi",
@@ -111,6 +114,43 @@ if (city) {
     hotelsToDisplay = sortedHotels.filter(hotel => hotel.city.toLocaleLowerCase() === city.toLocaleLowerCase());
 }
 
+let currentHotels = [...hotelsToDisplay];
+
+function getSortedHotels(hotelsToSort){
+    const sortBy = document.querySelector(
+        'input[name="sort"]:checked'
+    ).value;
+
+    const result = [...hotelsToSort];
+
+    switch(sortBy){
+        case "Recommeded":
+            result.sort((a,b) => a.recommended - b.recommended);
+            break;
+        case "priceLowToHigh":
+            result.sort((a,b) => a.room[0].price - b.room[0].price);
+            break;
+        case "priceHighToLow":
+            result.sort((a,b) => b.room[0].price - a.room[0].price);
+            break;
+        case "guestRatings":
+            result.sort((a, b) => b.rating - a.rating);
+            break;
+    }
+
+    return result;
+}
+
+document.querySelectorAll('input[name="sort"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+        ListHotels(getSortedHotels(currentHotels));
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
 
 function fillSearchBar() {
     const params = new URLSearchParams(window.location.search);
@@ -124,7 +164,97 @@ function fillSearchBar() {
 
 fillSearchBar();
 
-ListHotels(hotelsToDisplay);
+ListHotels(getSortedHotels(currentHotels));
+
+
+const applyButton = document.getElementById("apply");
+const priceRange = document.getElementById("priceRange");
+
+
+applyButton.addEventListener("click", () => {
+    const selectedRating = Number(
+        document.querySelector('input[name="rating"]:checked').value
+    );
+
+    const maxPrice = Number(priceRange.value);
+
+    const selectedTypes = [
+        ...document.querySelectorAll(".property-content input:checked")
+    ].map(input => input.value);
+
+    const selectedAmenities = [
+        ...document.querySelectorAll(".amenities-content input:checked")
+    ].map(input => input.value);
+
+    const filteredHotels = hotelsToDisplay.filter(hotel => {
+        const matchesRating = hotel.rating >= selectedRating;
+
+        const matchesPrice = hotel.room.some(
+            room => room.price <= maxPrice
+        );
+
+        const matchesTypes = selectedTypes.includes(hotel.type);
+
+        const matchesAmenities = selectedAmenities.every(
+            amenity => hotel.amenities[amenity] === true
+        );
+        
+        return matchesRating && matchesPrice && matchesTypes && matchesAmenities;
+    });
+
+    ListHotels(getSortedHotels(filteredHotels));
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+const resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click", ()=>{
+
+    document.getElementById("destsearch").value = "";
+    document.getElementById("checkin").value = "";
+    document.getElementById("checkout").value = "";
+    document.getElementById("guests").value = "";
+    document.getElementById("rooms").value = "";
+
+    history.replaceState(null, "", window.location.pathname);
+
+    hotelsToDisplay = sortedHotels;
+    currentHotels = sortedHotels;
+
+    document.querySelector('input[name="rating"][value="0"').checked=true;
+
+    priceRange.value = priceRange.max;
+    priceValue.textContent =
+        Number(priceRange.max).toLocaleString("en-IN");
+
+    document.querySelectorAll(
+        ".property-content input"
+    ).forEach(input => {
+        input.checked = true;
+    });
+
+    document.querySelectorAll(
+        ".amenities-content input"
+    ).forEach(input => {
+        input.checked = false;
+    });
+
+    document.querySelector(
+        'input[name="sort"][value="Recommended"]'
+    ).checked = true;
+
+    ListHotels(getSortedHotels(currentHotels));
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+})
+
 
 document.querySelectorAll(".hotel-card").forEach(card=>{
     card.addEventListener("click" , (e)=>{

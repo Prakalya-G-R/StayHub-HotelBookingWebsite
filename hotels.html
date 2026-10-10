@@ -39,7 +39,7 @@
 
         <a href="#" class="loginout">Login</a>
     </nav>
-        <div class="container">
+    <div class="container">
     <main class="hotels-page">
         <aside class="filters-container">
             <section class="filters-card">
@@ -125,10 +125,10 @@
                             <p class="pricehead">Price Range per Night</p>
                         </div>
                         <div class="price-content">
-                            <input id="priceRange" type="range" min="1000" max="25000" step="500" value="1000">
+                            <input id="priceRange" type="range" min="10000" max="50000" step="500" value="50000">
                             <div class="pricevalue">
                                 <p>Up to <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12"/><path d="M6 8h12"/><path d="m6 13 8.5 8"/><path d="M6 13h3"/><path d="M9 13c6.667 0 6.667-10 0-10"/></svg>
-                                <span id="priceValue">25000</span></p>
+                                <span id="priceValue">50000</span><span id="per-night-filter">/night</span></span></p>
                             </div>
                         </div>
                     </div>
@@ -156,12 +156,12 @@
                             <p class="amenitieshead">Amenities</p>
                         </div>
                         <div class="amenities-content">
-                            <label><input type="checkbox" value="wifi"> <span>Free WiFi</span></label>
-                            <label><input type="checkbox" value="pool"> <span>Swimming Pool</span></label>
-                            <label><input type="checkbox" value="parking"> <span>Parking</span></label>
-                            <label><input type="checkbox" value="restaurant"> <span>Restaurant</span></label>
-                            <label><input type="checkbox" value="gym"> <span>Gym</span></label>
-                            <label><input type="checkbox" value="spa"> <span>Spa</span></label>
+                            <label id="wifi"><input type="checkbox" value="wifi"> <span>Free WiFi</span></label>
+                            <label id="pool"><input type="checkbox" value="pool"> <span>Swimming Pool</span></label>
+                            <label id="parking"><input type="checkbox" value="parking"> <span>Parking</span></label>
+                            <label id="restaurant"><input type="checkbox" value="restaurant"> <span>Restaurant</span></label>
+                            <label id="gym"><input type="checkbox" value="gym"> <span>Gym</span></label>
+                            <label id="spa"><input type="checkbox" value="spa"> <span>Spa</span></label>
                         </div>
                     </div>
                     <div class="apply-reset">
@@ -177,7 +177,7 @@
         </aside>
         <section class="hotel-container">
             <div class="hotel-head">
-                <h2 class="hotelheading">All Hotels</h2>
+                <h2 class="hotelheading">All Hotels<span id="hotel-count">(0)</span></h2>
                 <div class="hotelactionicons">
                     <div class="filter-toggle">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-funnel-icon lucide-funnel"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></svg>
