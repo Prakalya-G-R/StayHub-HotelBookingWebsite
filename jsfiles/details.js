@@ -16,6 +16,27 @@ import { hotels } from "./hotels.js";
 import { amenityIcons } from "./hotels.js";
 import { hotelRatingDetails } from "./hotels.js";
 
+
+const placeholderReviews = [
+    {
+        id: 1,
+        name: "Sample Reviewer One",
+        rating: 5,
+        title: "A wonderful stay",
+        comment: "The stay was comfortable, and I had a pleasant experience.",
+        date: "2026-10-05"
+    },
+    {
+        id: 2,
+        name: "Sample Reviewer Two",
+        rating: 4,
+        title: "Comfortable stay",
+        comment: "The room was nice, and the overall experience was good.",
+        date: "2026-10-02"
+    }
+];
+
+
 const params = new URLSearchParams(window.location.search);
 const hotelId = params.get("id");
 const hotel = hotels.find(h => h.id == hotelId);
@@ -249,7 +270,90 @@ function renderHotelDetails() {
     updateGuests();
     updateTotal();
 
-    // --- Similar hotels ---
+    // ---Guest Reviews---
+    const openReviewForm = document.getElementById("openReviewForm");
+    const cancelReview = document.getElementById("cancelReview");
+    const reviewForm = document.getElementById("reviewForm");
+    const reviewList = document.getElementById("review-list");
+
+
+    function displayReviews() {
+        reviewList.innerHTML = placeholderReviews.map(review => {
+        const stars =
+            "★".repeat(review.rating) +
+            "☆".repeat(5 - review.rating);
+
+        return `
+            <article class="guest-review-card">
+                <div class="guest-review-author">
+                    <div class="guest-review-avatar">
+                        ${review.name .trim() .split(/\s+/) .map(word => word[0]) .slice(0, 2) .join("") .toUpperCase()}
+                    </div>
+
+                    <div>
+                        <h4>${review.name}</h4>
+                        <p>${review.date}</p>
+                    </div>
+                </div>
+
+                <div class="guest-review-stars">${stars}</div>
+
+                <h4 class="guest-review-title">${review.title}</h4>
+
+                <p class="guest-review-comment">
+                    ${review.comment}
+                </p>
+            </article>
+        `;
+    }).join("");
+
+    }
+
+    openReviewForm.addEventListener("click", ()=>{
+        reviewForm.hidden = false;
+    });
+
+    cancelReview.addEventListener("click", ()=>{
+        reviewForm.reset();
+        reviewForm.hidden = true;
+    });
+
+    reviewForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const name = document
+            .getElementById("reviewerName").value.trim();
+
+        const rating = Number(
+            document.getElementById("reviewerRating").value
+        );
+
+        const comment = document
+            .getElementById("reviewComment").value.trim();
+
+        if (!name || !comment || rating < 1 || rating > 5) {
+            return;
+        }
+
+        const reviews = getSavedReviews();
+
+        reviews.push({
+            id: Date.now(),
+            name: name,
+            rating: rating,
+            comment: comment,
+            date: new Date().toLocaleDateString("en-CA")
+        });
+
+        reviewForm.reset();
+        reviewForm.hidden = true;
+
+        displayReviews();
+    });
+
+    displayReviews();
+
+    // --- Similar Hotels ---
     const similarHotels = hotels
         .filter(h => h.city === hotel.city && h.id != hotel.id)
         .sort((a, b) => b.rating - a.rating)

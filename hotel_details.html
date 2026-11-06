@@ -142,6 +142,39 @@
                 </div>
             </section>
 
+            <section class="guest-reviews" id="guest-reviews">
+                <h2 class="guest-rev-head">Guest Reviews</h2>
+
+                <div id="review-list"></div>
+                <button type="button" id="openReviewForm">Write a review</button>
+
+                <form id="reviewForm" hidden>
+                    <label for="reviewerName">Name</label>
+                    <input type="text" id="reviewerName" placeholder="Enter your name" required>
+
+                    <label for="reviewerRating">Rating</label>
+                    <select id="reviewerRating" required>
+                        <option value="">Select Rating</option>
+                        <option value="5">5 <span id=stars>★★★★★</span></option>
+                        <option value="4">4 <span id=stars>★★★★</span></option>
+                        <option value="3">3 <span id=stars>★★★</span></option>
+                        <option value="2">2 <span id=stars>★★</span></option>
+                        <option value="1">1 <span id=stars>★</span></option>
+                    </select>
+
+                    <label for="reviewTitle">Review title</label>
+                    <input type="text" id="reviewTitle" placeholder="e.g. Comfortable Stay" required>
+
+                    <label for="reviewComment">Your review</label>
+                    <textarea id="reviewComment" placeholder="write your review" required></textarea>
+
+                    <div class="rev-btns">
+                        <button type="submit" id="submitReview">Submit Review</button>
+                        <button type="button" id="cancelReview">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
             <section class="similar-hotels">
                 <h2>Similar Hotels</h2>
                 <div class="simi-hotel-cards">

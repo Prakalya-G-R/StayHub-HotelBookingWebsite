@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cssfiles/booking.css">
     <link rel="stylesheet" href="cssfiles/common.css">
+    <link rel="stylesheet" href="cssfiles/regret_preventor.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&display=swap" rel="stylesheet">
@@ -260,9 +261,165 @@
         </div>
     </div>
 
+    <div class="modal-overlay">
+        <main class="regret-popup">
+            <header class="popup-header">
+                <p class="header-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles preview-icon"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></p>
 
+                <div class="header-text">
+                    <p id="main-header-txt">Before You Confirm</p>
+                    <p id="feature-name">AI Travel Regret Preventor</p>
+                </div>
+                <button class="close-popup" id="close-popup"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x preview-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+            </header>
+            <div class="line-seperator"></div>
+            <div class="popup-content">
+                <section class="analysis-intro">
+                    <p id="intro-head">Strong pick for your stay, with a few things to plan around.</p>
+                    <p id="ai-analysis-summary">Placeholder summary about the selected hotel, weather,
+                        price, reviews and location.</p>
+                    
+                    <div class="booking-tags">
+                        <span id="hotel-name">Hotel name</span>
+                        <span id="room-type">Room type</span>
+                        <span id="travel-dates">Travel dates</span>
+                        <span id="total-price">Total price</span>
+                    </div>
+                </section>
 
+                <section class="analysis-cards">
+                    <div class="good-card">
+                        <div class="good-head">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check preview-icon"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg></span>
+                            <p id="good-head-txt">What's good</p>
+                        </div>
+                        <div class="analysis-point">
+                            <h4>Positive point one</h4>
+                            <p>Placeholder supporting information.</p>
+                        </div>
+
+                        <div class="analysis-point">
+                            <h4>Positive point two</h4>
+                            <p>Placeholder supporting information.</p>
+                        </div>
+
+                        <div class="analysis-point">
+                            <h4>Positive point three</h4>
+                            <p>Placeholder supporting information.</p>
+                        </div>
+                    </div>
+
+                    <div class="concern-card">
+                        <div class="concern-head">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert preview-icon"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg></span>
+                            <p id="concern-head-txt">Things to consider before booking</p>
+                        </div>
+
+                        <div class="analysis-point">
+                            <h4>Concern one</h4>
+                            <p>Placeholder details and suggestions.</p>
+                        </div>
+
+                        <div class="analysis-point">
+                            <h4>Concern two</h4>
+                            <p>Placeholder details and suggestions.</p>
+                        </div>
+
+                        <div class="analysis-point">
+                            <h4>Concern three</h4>
+                            <p>Placeholder details and suggestions.</p>
+                        </div>
+                    </div>
+                </section>
+            <section class="suitability-section">
+
+                    <h3>Does this hotel suit you?</h3>
+
+                    <div class="suitability-row">
+                        <span>Group needs</span>
+
+                        <div class="progress-track">
+                            <div class="progress-fill good-progress"
+                                 style="width: 85%;"></div>
+                        </div>
+
+                        <span class="fit-label">Great fit</span>
+                    </div>
+
+                    <div class="suitability-row">
+                        <span>Relaxing stay</span>
+
+                        <div class="progress-track">
+                            <div class="progress-fill good-progress"
+                                 style="width: 88%;"></div>
+                        </div>
+
+                        <span class="fit-label">Great fit</span>
+                    </div>
+
+                    <div class="suitability-row">
+                        <span>Walkability</span>
+
+                        <div class="progress-track">
+                            <div class="progress-fill limited-progress"
+                                 style="width: 40%;"></div>
+                        </div>
+
+                        <span class="fit-label">Limited</span>
+                    </div>
+
+                </section>
+
+                <!-- Before payment checklist -->
+                <section class="checklist-section">
+
+                    <h3>Before you pay</h3>
+
+                    <div class="checklist-grid">
+
+                        <label>
+                            <input type="checkbox">
+                            Everyone has a valid photo ID
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Check-in 2 PM, check-out 11 AM
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Total includes taxes and fees
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            I've noted the cancellation terms
+                        </label>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Popup footer -->
+            <footer class="popup-footer">
+
+                <button type="button" id="show-better-matches">
+                    Show better matches
+                </button>
+
+                <button type="button" id="continue-booking">
+                    Continue booking
+                </button>
+
+            </footer>
+        </main>
+    </div>
 
     <script type="module" src="jsfiles/booking.js"></script>
+    <script src="jsfiles/details.js"></script>
+    <script src="jsfiles/ai_travel_regret_preventor.js"></script>
 </body>
 </html>

@@ -174,6 +174,9 @@ document.querySelectorAll(".next-btn").forEach(btn => {
             const netbanking=document.getElementById("netbanking");
 
             if(!card.reportValidity() && !upi.reportValidity() && !netbanking.reportValidity()) return;
+
+            document.querySelector(".modal-overlay").style.display = "flex";
+            return;
         }
 
         nextStep();
